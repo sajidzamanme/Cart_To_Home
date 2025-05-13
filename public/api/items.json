@@ -47,6 +47,54 @@
       "description": "This is a USB-C Cable duh",
       "imageLocation": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGR9wODqIK682jYoewAzasPXLZTQWxsJK5Kw&s",
       "review": 4
+    },
+    {
+      "id": 7,
+      "name": "Power Bank",
+      "price": 750,
+      "description": "This is a power bank duh",
+      "imageLocation": "https://media.wired.com/photos/6504b2a1afe02332db973557/4:3/w_960,c_limit/Ugreen_Power_Bank-SOURCE-Ugreen-Gear.jpg",
+      "review": 4
+    },
+    {
+      "id": 8,
+      "name": "Mouse",
+      "price": 300,
+      "description": "This is a Mouse duh",
+      "imageLocation": "https://dezlwerqy1h00.cloudfront.net/Media/Images/Product/Visual/24271_pictures_product_visual_1.png?auto=webp&format=pjpg&quality=100",
+      "review": 5
+    },
+    {
+      "id": 9,
+      "name": "Keyboard",
+      "price": 650,
+      "description": "This is a Keyboard duh",
+      "imageLocation": "https://www.binarylogic.com.bd/images/product_image/a4tech-kr-83-black-wired-usb-comfortkey-fn-keyboard.webp",
+      "review": 4
+    },
+    {
+      "id": 10,
+      "name": "Mouse Pad",
+      "price": 140,
+      "description": "This is a Mouse Pad duh",
+      "imageLocation": "https://www.ryans.com/storage/products/main/havit-mp843-black-gaming-mouse-11696853138.webp",
+      "review": 3
+    },
+    {
+      "id": 11,
+      "name": "Headphone",
+      "price": 1100,
+      "description": "This is a Headphone duh",
+      "imageLocation": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JTWgQYpdksFA6MB1fxAEPDOpBXqKMni5vw&s",
+      "review": 4
+    },
+    {
+      "id": 12,
+      "name": "USB-C Cable and this is aaa very long text to test something",
+      "price": 499,
+      "description": "This is a USB-C Cable duh",
+      "imageLocation": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGR9wODqIK682jYoewAzasPXLZTQWxsJK5Kw&s",
+      "review": 4
     }
   ]
 }

@@ -14,14 +14,14 @@ const ItemList = () => {
 
   return (
     <div className="grid place-items-center w-full px-3 mt-4">
-      <div className="grid grid-cols-2 gap-4 w-full place-items-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="grid grid-cols-2 gap-4 w-full place-items-center sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {itemStore.items
           .slice(pageNumber * 4 - 4, pageNumber * 4)
           .map((item) => (
             <ItemCard key={item.id} item={item} />
           ))}
 
-        <div className="flex flex-row justify-center items-center w-full gap-4 col-span-2">
+        <div className="flex flex-row justify-center items-center w-full gap-4 col-span-2 sm:col-span-3 lg:col-span-4 xl:col-span-5">
           {Array.from({ length: itemStore.items.length / 4 }).map(
             (_, index) => {
               return (

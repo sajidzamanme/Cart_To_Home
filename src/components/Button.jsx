@@ -1,9 +1,7 @@
-const Button = ({ label="Button", classList="" }) => {
+const Button = ({ label = "Button", classList = "px-4 py-2" }) => {
   return (
-    <div>
-      <div className={`bg-yellow-300 px-6 py-2 rounded-lg ${classList}`}>
-        <h1>{label}</h1>
-      </div>
+    <div className={`bg-yellow-300 rounded-lg cursor-pointer hover:bg-yellow-400 ${classList}`}>
+      <h1>{label}</h1>
     </div>
   );
 };

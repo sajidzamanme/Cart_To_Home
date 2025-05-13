@@ -1,0 +1,4 @@
+1. Implement Search
+2. Implement Infinite scrolling or pages
+3. Implement Select by catagory
+4. 

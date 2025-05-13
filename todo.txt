@@ -1,4 +1,5 @@
 1. Implement Search
-2. Implement Infinite scrolling or pages
-3. Implement Select by catagory
-4. 
+2. Implement Infinite scrolling on homepage
+3. Implement page numbers on search result (Implemented on Homepage)
+4. Implement Select by catagory
+5. Implement Cross on MenuOpen

@@ -12,7 +12,7 @@ const homepage = () => {
       
       {/* Search Bar & ItemList */}
       <div className="col-span-3 xl:col-span-4">
-        <div className="flex flex-row justify-center items-center p-3 md:hidden">
+        <div className="flex flex-row justify-center items-center px-2 pt-4 pb-0 md:hidden">
           <SearchBar />
         </div>
         <ItemList />

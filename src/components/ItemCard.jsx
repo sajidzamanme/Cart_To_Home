@@ -5,13 +5,7 @@ import starIcon from "/img/starIcon.png";
 const ItemCard = ({ item }) => {
   const [imgSrc, setImageSrc] = useState(item.imageLocation);
 
-  const [showedName, setShowedName] = useState(item.name);
-
-  useEffect(() => {
-    if (showedName.length > 22) {
-      setShowedName((prevState) => prevState.slice(0, 17) + "...");
-    }
-  }, []);
+  const showedName = (item.name.length > 22 ? item.name.slice(0, 17) + "..." : item.name);
 
   return (
     <div className="w-full border rounded-md hover:bg-[#dddddd]">

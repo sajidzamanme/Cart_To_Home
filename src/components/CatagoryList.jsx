@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useItemStore from "../stores/useItemStore";
 import ItemCard from "./ItemCard";
 import PageBar from "./PageBar";
@@ -10,6 +10,10 @@ const CatagoryList = ({ selectedCatagory }) => {
   );
   const [pageNumber, setPageNumber] = useState(1);
   const itemPerPage = 2;
+
+  useEffect(() => {
+    setPageNumber(1);
+  }, [selectedCatagory])
   return (
     <>
       {selectedItems

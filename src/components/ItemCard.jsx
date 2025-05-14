@@ -5,7 +5,8 @@ import starIcon from "/img/starIcon.png";
 const ItemCard = ({ item }) => {
   const [imgSrc, setImageSrc] = useState(item.imageLocation);
 
-  const showedName = (item.name.length > 22 ? item.name.slice(0, 17) + "..." : item.name);
+  const showedName =
+    item.name.length > 17 ? item.name.slice(0, 17) + "..." : item.name;
 
   return (
     <div className="w-full border rounded-md hover:bg-[#dddddd]">

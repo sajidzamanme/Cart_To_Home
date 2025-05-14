@@ -15,7 +15,10 @@ const NavBar = ({ setIsMenuVisible }) => {
       </div>
 
       <div className="flex flex-row justify-between items-center p-3 w-full md:px-8">
-        <button onClick={openMenu} className="flex flex-col gap-1 sm:gap-2 md:hidden">
+        <button
+          onClick={openMenu}
+          className="flex flex-col gap-1 sm:gap-2 md:hidden"
+        >
           <div className="bg-white w-[2rem] h-[3px] sm:w-[2.5rem]"></div>
           <div className="bg-white w-[2rem] h-[3px] sm:w-[2.5rem]"></div>
           <div className="bg-white w-[2rem] h-[3px] sm:w-[2.5rem]"></div>

@@ -2,31 +2,35 @@
   "items": [
     {
       "id": 1,
-      "name": "Power Bank",
-      "price": 750,
-      "description": "This is a power bank duh",
-      "imageLocation": "https://media.wired.com/photos/6504b2a1afe02332db973557/4:3/w_960,c_limit/Ugreen_Power_Bank-SOURCE-Ugreen-Gear.jpg",
+      "name": "Joyroom JR-PBF12 10000mAh 12W 2.4A LED Power Bank",
+      "catagory": "powerbank",
+      "price": 850,
+      "description": "The Joyroom JR-PBF12 10000mAh 12W 2.4A LED Power Bank is an excellent choice for consumers who need a portable yet strong charging option. Its 10000mAh battery provides several recharges for smartphones, tablets, and other USB-powered devices, making it ideal for vacation, everyday commutes, and lengthy workdays. Despite its large capacity, the power bank is tiny and compact, making it simple to slide into pockets or bags for convenient transportation. One of its most notable features is the Type-C connector, which functions as both an input and output, allowing for quick recharging of the power bank and efficient charging of your devices.",
+      "imageLocation": "https://www.startech.com.bd/image/cache/catalog/power-bank/joyroom/jr-pbf12/jr-pbf12-01-500x500.webp",
       "review": 4
     },
     {
       "id": 2,
-      "name": "Mouse",
-      "price": 300,
-      "description": "This is a Mouse duh",
-      "imageLocation": "https://dezlwerqy1h00.cloudfront.net/Media/Images/Product/Visual/24271_pictures_product_visual_1.png?auto=webp&format=pjpg&quality=100",
+      "name": "A4TECH OP-730D 2X Click Optical Wired Mouse",
+      "catagory": "mouse",
+      "price": 450,
+      "description": "The A4TECH OP-730D comes with hyper-fast scrolling for increased productivity. A nearly frictionless scroll wheel lets you fly through long documents and Web pages with a single flick. Experience smoother cursor control on virtually any surface. The contoured design gives you more support and control. Extreme quality offer over 5 million clicks guaranteed. Thanks to the 1000 DPI, you get guaranteed smooth and accurate tracking anywhere, even on furry textiles. Just one click on “2X Button” straightly opens files and programs easily. Without any driver, Save time & improve efficiency. This mouse has a dust-resistant design that prolongs the wheel life-span. 4-Way Wheel offers smart horizontal & vertical scrolling. A4TECH OP-730D Optical Wired Mouse comes with 1 year warranty.",
+      "imageLocation": "https://www.startech.com.bd/image/cache/catalog/mouse/a4tech/730d/730d-main-500x500.jpg",
       "review": 5
     },
     {
       "id": 3,
-      "name": "Keyboard",
-      "price": 650,
-      "description": "This is a Keyboard duh",
-      "imageLocation": "https://www.binarylogic.com.bd/images/product_image/a4tech-kr-83-black-wired-usb-comfortkey-fn-keyboard.webp",
+      "name": "PC Power K98 RGB Hot Swappable Mechanical Keyboard",
+      "catagory": "keyboard",
+      "price": 2050,
+      "description": "The PC Power K98 RGB Gaming Mechanical Keyboard is a high-quality gaming keyboard that enhances your gaming experience. The PC Power Mechanical Keyboard features a compact 98-key layout with blue switches for tactile and responsive keystrokes, making it ideal for gamers and typists. The K98 RGB Keyboard features N-Key rollover which ensures accurate registration of every keystroke for precise gameplay. The PC Power K98 Gaming Keyboard's standout feature is the hot-swappable switches, allowing easy customization and replacement without soldering, which extends the keyboard's lifespan. The PC Power K98 vibrant RGB lighting adds a stylish flair to your setup with customizable effects.",
+      "imageLocation": "https://www.startech.com.bd/image/cache/catalog/keyboard/pc-power/k98/k98-black-01-500x500.webp",
       "review": 4
     },
     {
       "id": 4,
       "name": "Mouse Pad",
+      "catagory": "mousepad",
       "price": 140,
       "description": "This is a Mouse Pad duh",
       "imageLocation": "https://www.ryans.com/storage/products/main/havit-mp843-black-gaming-mouse-11696853138.webp",
@@ -35,6 +39,7 @@
     {
       "id": 5,
       "name": "Headphone",
+      "catagory": "headphone",
       "price": 1100,
       "description": "This is a Headphone duh",
       "imageLocation": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JTWgQYpdksFA6MB1fxAEPDOpBXqKMni5vw&s",
@@ -43,6 +48,7 @@
     {
       "id": 6,
       "name": "USB-C Cable",
+      "catagory": "cables",
       "price": 499,
       "description": "This is a USB-C Cable duh",
       "imageLocation": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGR9wODqIK682jYoewAzasPXLZTQWxsJK5Kw&s",
@@ -50,31 +56,35 @@
     },
     {
       "id": 7,
-      "name": "Power Bank",
-      "price": 750,
-      "description": "This is a power bank duh",
-      "imageLocation": "https://media.wired.com/photos/6504b2a1afe02332db973557/4:3/w_960,c_limit/Ugreen_Power_Bank-SOURCE-Ugreen-Gear.jpg",
+      "name": "Hoco J89 10000mAh 20W Fast Charging Digital Display Power Bank",
+      "catagory": "powerbank",
+      "price": 1250,
+      "description": "The Hoco J89 10000mAh 20W Fast Charging Power Bank is a compact yet powerful device that will keep your devices charged and ready to go. With a large 10000mAh capacity, this power bank has enough juice to recharge your devices several times, making it a great travel or everyday companion. The rated capacity of 5900mAh provides efficient charging, while its twin input options - a Micro-USB port and a Type-C connection - offer fast charging at 18W and are compatible with the QC, FC, and AFC protocols. The Hoco J89 10000mAh 20W Power Bank's Type-C output gives an amazing 20W of power, making it ideal for quick charging devices, while the USB connection provides up to 18W of power.",
+      "imageLocation": "https://www.startech.com.bd/image/cache/catalog/power-bank/Hoco/j89/j89-01-500x500.webp",
       "review": 4
     },
     {
       "id": 8,
-      "name": "Mouse",
-      "price": 300,
-      "description": "This is a Mouse duh",
-      "imageLocation": "https://dezlwerqy1h00.cloudfront.net/Media/Images/Product/Visual/24271_pictures_product_visual_1.png?auto=webp&format=pjpg&quality=100",
+      "name": "Logitech B100 Optical USB Mouse",
+      "catagory": "mouse",
+      "price": 420,
+      "description": "An office basic with built-in quality.-- Comfort in hand Left-handed or right, you can work comfortably all day long with this ambidextrous mouse.Smooth operator Youâ€™re in control with smooth, responsive optical tracking that moves the cursor just where you want it. Ready in no time This plug-and-play mouse is simple to set upâ€”you just plug it in to your USB and get back to business.",
+      "imageLocation": "https://www.startech.com.bd/image/cache/data/B100%20Optical%20USB%20Mouse-500x500.png",
       "review": 5
     },
     {
       "id": 9,
-      "name": "Keyboard",
-      "price": 650,
-      "description": "This is a Keyboard duh",
-      "imageLocation": "https://www.binarylogic.com.bd/images/product_image/a4tech-kr-83-black-wired-usb-comfortkey-fn-keyboard.webp",
+      "name": "Havit KB250 USB Wired Keyboard",
+      "catagory": "keyboard",
+      "price": 560,
+      "description": "The Havit KB250 USB Wired Keyboard is a dependable and ergonomic input device that will improve your computer experience. The keyboard has a simple USB port that allows for a quick and easy connection to your device. The keyboard's size of 435x125x23mm find the optimal combination between compactness and capability. It has 104 keys, including a numeric keypad, and offers a wide variety of input choices for efficient and pleasant typing. The keys are built to last and are rated for 8,000,000 keystrokes, assuring longevity and reliable performance. The 1500mm cable length allows you to arrange your keyboard according to your workspace requirements.",
+      "imageLocation": "https://www.startech.com.bd/image/cache/catalog/keyboard/havit/kb250/kb250-02-500x500.jpg",
       "review": 4
     },
     {
       "id": 10,
       "name": "Mouse Pad",
+      "catagory": "mousepad",
       "price": 140,
       "description": "This is a Mouse Pad duh",
       "imageLocation": "https://www.ryans.com/storage/products/main/havit-mp843-black-gaming-mouse-11696853138.webp",
@@ -83,6 +93,7 @@
     {
       "id": 11,
       "name": "Headphone",
+      "catagory": "headphone",
       "price": 1100,
       "description": "This is a Headphone duh",
       "imageLocation": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JTWgQYpdksFA6MB1fxAEPDOpBXqKMni5vw&s",
@@ -91,6 +102,115 @@
     {
       "id": 12,
       "name": "USB-C Cable and this is aaa very long text to test something",
+      "catagory": "cables",
+      "price": 499,
+      "description": "This is a USB-C Cable duh",
+      "imageLocation": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGR9wODqIK682jYoewAzasPXLZTQWxsJK5Kw&s",
+      "review": 4
+    },
+    {
+      "id": 13,
+      "name": "Awei P10K 10000mah 22.5W Fast Charging Digital Display Power Bank",
+      "catagory": "powerbank",
+      "price": 1350,
+      "description": "The Awei P10K 10000mAh 22.5W Fast Charging Digital Display Power Bank is a versatile and powerful portable charger that will suit your on-the-go charging requirements. With a large capacity of 10000mAh, it keeps your gadgets powered throughout the day. The power bank enables rapid charging, with a maximum output of 22.5W, allowing you to charge your gadgets quickly and efficiently. It has an LED digital display that shows real-time information on the remaining battery capacity, so you always know how much power is left. The Awei P10K 10000mAh 22.5W Fast Charging Power Bank has several input and output choices for enhanced convenience.",
+      "imageLocation": "https://www.startech.com.bd/image/cache/catalog/power-bank/awei/p10k/p10k-black-500x500.webp",
+      "review": 4
+    },
+    {
+      "id": 14,
+      "name": "Hoco GM25 Dual-Mode Wireless Mouse",
+      "catagory": "mouse",
+      "price": 1050,
+      "description": "The Hoco GM25 Dual-Mode Wireless Mouse is a feature-rich, ergonomic gadget that strikes the ideal combination of usefulness, portability, and durability. The Hoco GM25 Wireless Mouse, designed for customers who want both adaptability and dependability, enables dual-mode connectivity via 2.4GHz wireless and Bluetooth, assuring broad compatibility with laptops, desktops, and tablets. This versatility makes the Hoco GM25 2.4G Mouse excellent for professionals, students, and travelers who regularly switch devices and want a dependable, multi-purpose input solution. The Hoco GM25 features adjustable DPI settings at 800, 1200, and 1600, allowing precise sensitivity control for various tasks such as graphic design, browsing, and casual gaming. Equipped with 4 responsive buttons—including a clickable scroll wheel and a side navigation button—it offers enhanced control and productivity. ",
+      "imageLocation": "https://dezlwerqy1h00.cloudfront.net/Media/Images/Product/Visual/24271_pictures_product_visual_1.png?auto=webp&format=pjpg&quality=100",
+      "review": 5
+    },
+    {
+      "id": 15,
+      "name": "Dareu EK807G TKL Wireless Brown Switch Mechanical Keyboard",
+      "catagory": "keyboard",
+      "price": 2700,
+      "description": "The Dareu EK807G TKL Wireless Mechanical Keyboard is a compact, high-performance keyboard ideal for gamers and professionals. With an 87-key Tenkeyless layout, it saves space while offering essential functionality. It features durable Dareu D Switches, rated for 50 million keystrokes, and operates wirelessly up to 10 meters via 2.4G technology. The ABS doubleshot keycaps ensure long-lasting durability, and the 6-key rollover allows multiple simultaneous key presses without conflict. Compatible with Windows XP, 7, 8, and 10, this keyboard combines reliability, portability, and performance.",
+      "imageLocation": "https://www.startech.com.bd/image/cache/catalog/keyboard/dareu/ek807g/ek807g-02-500x500.webp",
+      "review": 4
+    },
+    {
+      "id": 16,
+      "name": "Mouse Pad",
+      "catagory": "mousepad",
+      "price": 140,
+      "description": "This is a Mouse Pad duh",
+      "imageLocation": "https://www.ryans.com/storage/products/main/havit-mp843-black-gaming-mouse-11696853138.webp",
+      "review": 3
+    },
+    {
+      "id": 17,
+      "name": "Headphone",
+      "catagory": "headphone",
+      "price": 1100,
+      "description": "This is a Headphone duh",
+      "imageLocation": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JTWgQYpdksFA6MB1fxAEPDOpBXqKMni5vw&s",
+      "review": 4
+    },
+    {
+      "id": 18,
+      "name": "USB-C Cable",
+      "catagory": "cables",
+      "price": 499,
+      "description": "This is a USB-C Cable duh",
+      "imageLocation": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGR9wODqIK682jYoewAzasPXLZTQWxsJK5Kw&s",
+      "review": 4
+    },
+    {
+      "id": 19,
+      "name": "UGREEN PB311 10000mAh 20W Fast Charging Power Bank",
+      "catagory": "powerbank",
+      "price": 2300,
+      "description": "The UGREEN PB311 10000mAh 20W Fast Charging Power Bank is a reliable and versatile portable charging solution. With a 10000mAh (37Wh) lithium polymer battery, it guarantees sufficient power for prolonged use. With two output ports Type-C and USB-A, it provides a variety of charging choices. While the Type-C output can supply up to 20W and is compatible with Quick Charge technologies for quick charging, the USB-A output can support up to 22.5W. ",
+      "imageLocation": "https://www.startech.com.bd/image/cache/catalog/power-bank/Ugreen/pb311/pb311-01-500x500.webp",
+      "review": 4
+    },
+    {
+      "id": 20,
+      "name": "Corsair Katar PRO Ultra Light Gaming Mouse Black",
+      "catagory": "mouse",
+      "price": 300,
+      "description": "Experience lightweight design and heavy-weight performance with the CORSAIR KATAR PRO Ultra-Light Gaming Mouse, weighing in at just 69g with a compact symmetric shape and a precision 12,400 DPI optical sensor. Weighing just 69g, the KATAR PRO is extremely light and agile for hours of fast-paced FPS or MOBA gameplay. The compact, symmetric shape makes it great for claw and fingertip grip styles. A custom PixArt 12,400 DPI optical sensor offers the precision and high-accuracy tracking you need for victory. CORSAIR iCUE software enables vivid dynamic RGB lighting control, sophisticated macro programming and full-system lighting synchronization across compatible CORSAIR peripherals, coolers, fans and more.",
+      "imageLocation": "https://www.startech.com.bd/image/cache/catalog/mouse/corsair/katar-pro-wire/katar-pro-wire-500x500.jpg",
+      "review": 5
+    },
+    {
+      "id": 21,
+      "name": "HyperX Alloy Core RGB Membrane Gaming Keyboard",
+      "catagory": "keyboard",
+      "price": 5000,
+      "description": "The HyperX Alloy Core RGB Membrane Gaming Keyboard is design for gamers looking to enhance their keyboardâ€™s style and performance without breaking the bank. This gaming keyboard featured with HyperXâ€™s signature radiant light bar and smooth, dynamic RGB lighting effects.",
+      "imageLocation": "https://www.startech.com.bd/image/cache/catalog/keyboard/hyperx/alloy-core/alloy-core-01-500x500.jpg",
+      "review": 4
+    },
+    {
+      "id": 22,
+      "name": "Mouse Pad",
+      "catagory": "mousepad",
+      "price": 140,
+      "description": "This is a Mouse Pad duh",
+      "imageLocation": "https://www.ryans.com/storage/products/main/havit-mp843-black-gaming-mouse-11696853138.webp",
+      "review": 3
+    },
+    {
+      "id": 23,
+      "name": "Headphone",
+      "catagory": "headphone",
+      "price": 1100,
+      "description": "This is a Headphone duh",
+      "imageLocation": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JTWgQYpdksFA6MB1fxAEPDOpBXqKMni5vw&s",
+      "review": 4
+    },
+    {
+      "id": 24,
+      "name": "USB-C Cable and this is aaa very long text to test something",
+      "catagory": "cables",
       "price": 499,
       "description": "This is a USB-C Cable duh",
       "imageLocation": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGR9wODqIK682jYoewAzasPXLZTQWxsJK5Kw&s",

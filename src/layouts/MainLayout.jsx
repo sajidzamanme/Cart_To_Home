@@ -10,7 +10,10 @@ const MainLayout = () => {
 
   return (
     <div className="flex flex-col min-h-dvh max-h-full w-full">
-      <NavBar setIsMenuVisible={setIsMenuVisible} />
+      <NavBar
+        isMenuVisible={isMenuVisible}
+        setIsMenuVisible={setIsMenuVisible}
+      />
       <div className="relative flex-grow">
         <div className="z-10">
           <Outlet context={{ selectedCatagory, setSelectedCatagory }} />

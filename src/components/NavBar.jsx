@@ -2,7 +2,7 @@ import Button from "./Button";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ setIsMenuVisible }) => {
+const NavBar = ({ isMenuVisible, setIsMenuVisible }) => {
   const openMenu = () => {
     setIsMenuVisible((prevState) => !prevState);
   };
@@ -23,9 +23,25 @@ const NavBar = ({ setIsMenuVisible }) => {
           onClick={openMenu}
           className="flex flex-col justify-center items-center gap-1 w-[4rem] h-[1.7rem] sm:gap-2 md:hidden"
         >
-          <div className="bg-white w-[2rem] h-[3px] sm:w-[2.5rem]"></div>
-          <div className="bg-white w-[2rem] h-[3px] sm:w-[2.5rem]"></div>
-          <div className="bg-white w-[2rem] h-[3px] sm:w-[2.5rem]"></div>
+          <div
+            className={`bg-white w-[2rem] h-[3px] sm:w-[2.5rem] transform transition-all duration-300 rounded-2xl ease-in-out ${
+              isMenuVisible
+                ? "rotate-45 translate-y-[0.4rem] sm:translate-y-[0.7rem]"
+                : ""
+            }`}
+          ></div>
+          <div
+            className={`bg-white w-[2rem] h-[3px] sm:w-[2.5rem] transform transition-all duration-300 rounded-2xl ease-in-out ${
+              isMenuVisible ? "opacity-0 duration-1" : "duration-500"
+            }`}
+          ></div>
+          <div
+            className={`bg-white w-[2rem] h-[3px] sm:w-[2.5rem] transform transition-all duration-300 rounded-2xl ease-in-out ${
+              isMenuVisible
+                ? "-rotate-45 translate-y-[-0.48rem] sm:translate-y-[-0.66rem]"
+                : ""
+            }`}
+          ></div>
         </button>
 
         <div className="hidden flex-row items-center text-3xl text-white font-bold md:flex md:w-fit">

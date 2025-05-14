@@ -18,7 +18,7 @@ const NavBar = ({ isMenuVisible, setIsMenuVisible }) => {
         </Link>
       </div>
 
-      <div className="flex flex-row justify-between items-center p-3 w-full md:px-8">
+      <div className="flex flex-row justify-between items-center pl-0 p-3 w-full md:px-8">
         <button
           onClick={openMenu}
           className="flex flex-col justify-center items-center gap-1 w-[4rem] h-[1.7rem] sm:gap-2 md:hidden"

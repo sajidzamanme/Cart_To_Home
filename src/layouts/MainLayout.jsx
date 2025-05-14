@@ -6,13 +6,14 @@ import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [selectedCatagory, setSelectedCatagory] = useState("none");
 
   return (
     <div className="flex flex-col min-h-dvh max-h-full w-full">
       <NavBar setIsMenuVisible={setIsMenuVisible} />
       <div className="relative flex-grow">
         <div className="z-10">
-          <Outlet />
+          <Outlet context={{ selectedCatagory, setSelectedCatagory }} />
         </div>
         {isMenuVisible && (
           <>
@@ -21,7 +22,10 @@ const MainLayout = () => {
               className="z-30 absolute top-0 w-full h-full bg-black opacity-50"
             ></div>
             <div className="z-50 absolute top-0 h-full w-2/3 bg-white">
-              <SideBar />
+              <SideBar
+                selectedCatagory={selectedCatagory}
+                setSelectedCatagory={setSelectedCatagory}
+              />
             </div>
           </>
         )}

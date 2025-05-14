@@ -10,7 +10,7 @@ const MainLayout = () => {
   return (
     <div className="flex flex-col min-h-dvh max-h-full w-full">
       <NavBar setIsMenuVisible={setIsMenuVisible} />
-      <div className="relative flex-grow mb-4">
+      <div className="relative flex-grow">
         <div className="z-10">
           <Outlet />
         </div>

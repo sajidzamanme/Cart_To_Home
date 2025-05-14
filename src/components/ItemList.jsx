@@ -13,7 +13,7 @@ const ItemList = () => {
   // }, [pageNumber])
 
   return (
-    <div className="grid place-items-center w-full px-3 mt-4">
+    <div className="grid place-items-center w-full px-3 my-4">
       <div className="grid grid-cols-2 gap-4 w-full place-items-center sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {itemStore.items
           .slice(pageNumber * 4 - 4, pageNumber * 4)

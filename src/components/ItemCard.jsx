@@ -15,7 +15,7 @@ const ItemCard = ({ item }) => {
         src={imgSrc}
         onError={() => setImageSrc(defaultImage)}
         alt=""
-        className="p-2 w-full h-auto aspect-[4/3] object-contain"
+        className="p-2 w-[90%] place-self-center h-auto my-[4%] aspect-[4/3] object-contain bg-white"
       />
 
       {/* Name & Details */}

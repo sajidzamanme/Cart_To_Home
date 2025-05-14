@@ -2,9 +2,10 @@ import SearchBar from "../components/SearchBar";
 import ItemList from "../components/ItemList";
 import SideBar from "../components/SideBar";
 import { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
 const homepage = () => {
-  const [selectedCatagory, setSelectedCatagory] = useState("none");
+  const { selectedCatagory, setSelectedCatagory } = useOutletContext();
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5">

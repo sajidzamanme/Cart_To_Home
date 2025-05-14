@@ -2,5 +2,5 @@
 2. [X] Implement page number on homepage
 3. [X] Implement page numbers on search result
 4. [X] Implement Select by catagory
-5. [ ] Implement Cross on MenuOpen
+5. [X] Implement Cross on MenuOpen
 6. [ ] Try Infinite scrolling

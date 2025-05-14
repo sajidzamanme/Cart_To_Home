@@ -9,7 +9,7 @@ const MainLayout = () => {
   const [selectedCatagory, setSelectedCatagory] = useState("none");
 
   return (
-    <div className="flex flex-col min-h-dvh max-h-full w-full">
+    <div className="flex flex-col min-h-dvh max-h-full w-dvw">
       <NavBar setIsMenuVisible={setIsMenuVisible} />
       <div className="relative flex-grow">
         <div className="z-10">
@@ -25,6 +25,7 @@ const MainLayout = () => {
               <SideBar
                 selectedCatagory={selectedCatagory}
                 setSelectedCatagory={setSelectedCatagory}
+                setIsMenuVisible={setIsMenuVisible}
               />
             </div>
           </>

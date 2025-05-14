@@ -1,5 +1,6 @@
 import Button from "./Button";
 import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
 
 const NavBar = ({ setIsMenuVisible }) => {
   const openMenu = () => {
@@ -9,15 +10,18 @@ const NavBar = ({ setIsMenuVisible }) => {
   return (
     <div className="relative flex flex-row items-center justify-center bg-[#8400ff]">
       <div className="absolute flex flex-row items-center md:hidden md:w-fit">
-        <h1 className="w-full text-center text-2xl text-white font-bold md:text-nowrap sm:text-3xl">
+        <Link
+          to={"/"}
+          className="w-full text-center text-2xl text-white font-bold md:text-nowrap sm:text-3xl"
+        >
           Cart To Home
-        </h1>
+        </Link>
       </div>
 
       <div className="flex flex-row justify-between items-center p-3 w-full md:px-8">
         <button
           onClick={openMenu}
-          className="flex flex-col gap-1 sm:gap-2 md:hidden"
+          className="flex flex-col justify-center items-center gap-1 w-[4rem] h-[1.7rem] sm:gap-2 md:hidden"
         >
           <div className="bg-white w-[2rem] h-[3px] sm:w-[2.5rem]"></div>
           <div className="bg-white w-[2rem] h-[3px] sm:w-[2.5rem]"></div>

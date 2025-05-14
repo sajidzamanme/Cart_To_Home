@@ -19,7 +19,7 @@ const SideBarTile = ({
           selectedCatagory === label.toLowerCase() ? "bg-[#dddddd]" : ""
         }`}
       >
-        {label}{" "}
+        {label[0].toUpperCase() + label.slice(1)}{" "}
         <h1
           className={`${
             selectedCatagory === label.toLowerCase() ? "flex" : "hidden"

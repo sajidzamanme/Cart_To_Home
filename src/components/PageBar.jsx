@@ -7,7 +7,7 @@ const PageBar = ({ length, itemPerPage, pageNumber, setPageNumber }) => {
             <button
               key={index}
               onClick={() => setPageNumber(index + 1)}
-              className={`w-8 h-8 cursor-pointer ${
+              className={`flex flex-row justify-center items-center w-8 h-8 cursor-pointer rounded-lg hover:bg-[#dddddd] ${
                 pageNumber === index + 1 ? "font-bold text-[#9d33ff]" : ""
               }`}
             >

@@ -54,9 +54,9 @@ const NavBar = ({ isMenuVisible, setIsMenuVisible }) => {
           <SearchBar />
         </div>
 
-        <div className="">
+        <Link to={"/signup-login"}>
           <Button label={"Signup/Login"} classList="p-1 sm:p-2 md:p-3" />
-        </div>
+        </Link>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ const MainLayout = () => {
           onClick={() => {
             if (isMenuVisible) setIsMenuVisible((prevState) => !prevState);
           }}
-          className={`z-30 absolute top-0 w-full h-full bg-black transform transition-all duration-300 ease-in-out ${
+          className={`z-30 absolute top-0 w-full h-full bg-black md:hidden transform transition-all duration-300 ease-in-out ${
             isMenuVisible
               ? "opacity-50 pointer-events-auto"
               : "opacity-0 pointer-events-none"
@@ -31,7 +31,7 @@ const MainLayout = () => {
         ></div>
 
         <div
-          className={`z-50 absolute top-0 h-full w-2/3 bg-white transform transition-all duration-300 ease-in-out ${
+          className={`z-50 absolute top-0 h-full w-2/3 bg-white md:hidden transform transition-all duration-300 ease-in-out ${
             isMenuVisible ? "translate-x-0" : "-translate-x-full"
           }`}
         >

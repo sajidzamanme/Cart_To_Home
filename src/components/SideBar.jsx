@@ -5,17 +5,19 @@ const SideBar = ({
   selectedCatagory,
   setSelectedCatagory,
   setIsMenuVisible = () => {},
+  loginState,
+  adminState
 }) => {
   const itemStore = useItemStore();
 
-  let itemCatagories = [
+  const itemCatagories = [
     ...new Set(itemStore.items.map((item) => item.catagory)),
   ];
 
   return (
     <div className="flex flex-col w-[95%] mt-5">
       <div className="flex flex-col gap-1 ml-4 w-[85%]">
-        <h1 className="bg-[#dddddd] w-full p-2 rounded-lg">Categories</h1>
+        <h1 className="bg-[#DBE2EF] w-full p-2 rounded-lg">Categories</h1>
         <div className="flex flex-col gap-2 ml-4 w-[80%]">
           {itemCatagories.map((item, index) => (
             <SideBarTile
@@ -27,6 +29,11 @@ const SideBar = ({
             />
           ))}
         </div>
+        {
+          loginState && adminState && (
+            <h1>Admin Panel</h1>
+          )
+        }
       </div>
     </div>
   );

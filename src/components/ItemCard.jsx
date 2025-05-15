@@ -9,7 +9,7 @@ const ItemCard = ({ item }) => {
     item.name.length > 17 ? item.name.slice(0, 17) + "..." : item.name;
 
   return (
-    <div className="w-full border rounded-md hover:bg-[#dddddd]">
+    <div className="w-full border rounded-md hover:bg-[#DBE2EF]">
       {/* Image */}
       <img
         src={imgSrc}
@@ -20,9 +20,9 @@ const ItemCard = ({ item }) => {
 
       {/* Name & Details */}
       <div className="px-2 pb-1">
-        <h1 className="font-semibold text-[#9d33ff]">{showedName}</h1>
+        <h1 className="font-semibold text-[#3F72AF]">{showedName}</h1>
         <div className="flex flex-row justify-between">
-          <h1 className="font-medium text-[#9d33ff]">{item.price}tk</h1>
+          <h1 className="font-medium text-[#3F72AF]">{item.price}tk</h1>
           <div className="flex flex-row gap-1">
             {Array.from({ length: item.review }).map((_, index) => {
               return (

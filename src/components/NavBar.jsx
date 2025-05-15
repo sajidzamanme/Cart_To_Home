@@ -1,14 +1,14 @@
-import Button from "./Button";
+import CustomBtn from "./CustomBtn";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ isMenuVisible, setIsMenuVisible }) => {
+const NavBar = ({ isMenuVisible, setIsMenuVisible, loginState, setLoginState }) => {
   const openMenu = () => {
     setIsMenuVisible((prevState) => !prevState);
   };
 
   return (
-    <div className="relative flex flex-row items-center justify-center bg-[#8400ff]">
+    <div className="relative flex flex-row items-center justify-center bg-[#3F72AF]">
       <div className="absolute flex flex-row items-center md:hidden md:w-fit">
         <Link
           to={"/"}
@@ -45,18 +45,27 @@ const NavBar = ({ isMenuVisible, setIsMenuVisible }) => {
         </button>
 
         <div className="hidden flex-row items-center text-3xl text-white font-bold md:flex md:w-fit">
-          <h1 className="w-full text-center font-bold md:text-nowrap">
+          <Link
+            to={"/"}
+            className="w-full text-center font-bold md:text-nowrap"
+          >
             Cart To Home
-          </h1>
+          </Link>
         </div>
 
         <div className="hidden flex-row w-full px-3 md:flex">
           <SearchBar />
         </div>
 
-        <Link to={"/signup-login"}>
-          <Button label={"Signup/Login"} classList="p-1 sm:p-2 md:p-3" />
-        </Link>
+        {loginState ? (
+          <CustomBtn label="Logout" classList="p-1 sm:p-2 md:p-3" onClickFunc={() => {
+            setLoginState(false)
+          }} />
+        ) : (
+          <Link to={"/signup-login"}>
+            <CustomBtn label={"Signup/Login"} classList="p-1 sm:p-2 md:p-3" />
+          </Link>
+        )}
       </div>
     </div>
   );

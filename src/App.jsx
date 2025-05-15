@@ -10,11 +10,13 @@ import NotFoundPage from "./pages/NotFoundPage";
 import axios from "axios";
 import useItemStore from "./stores/useItemStore";
 import { useEffect } from "react";
+import LoginPage from "./pages/LoginPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       <Route index element={<HomePage />} />
+      <Route path="signup-login" element={<LoginPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>
   )

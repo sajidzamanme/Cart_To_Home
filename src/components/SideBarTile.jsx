@@ -15,17 +15,17 @@ const SideBarTile = ({
           );
           setIsMenuVisible((prevState) => !prevState);
         }}
-        className={`flex flex-row items-center justify-between w-full p-2 rounded-lg text-left hover:bg-[#dddddd] ${
-          selectedCatagory === label.toLowerCase() ? "bg-[#dddddd]" : ""
+        className={`flex flex-row items-center justify-between w-full p-2 rounded-lg text-left hover:bg-[#DBE2EF] ${
+          selectedCatagory === label.toLowerCase() ? "bg-[#DBE2EF]" : ""
         }`}
       >
         {label[0].toUpperCase() + label.slice(1)}{" "}
         <h1
           className={`${
             selectedCatagory === label.toLowerCase() ? "flex" : "hidden"
-          } flex-row justify-center items-center size-6 rounded-lg hover:bg-gray-100`}
+          } flex-row justify-center items-center size-6 rounded-lg hover:bg-[#F9F7F7]`}
         >
-          <MdOutlineRemoveCircle />
+          <MdOutlineRemoveCircle className="text-[#112D4E]"/>
         </h1>
       </button>
     </div>

@@ -4,7 +4,7 @@ import SideBar from "../components/SideBar";
 import { useOutletContext } from "react-router-dom";
 
 const homepage = () => {
-  const { selectedCatagory, setSelectedCatagory } = useOutletContext();
+  const { selectedCatagory, setSelectedCatagory, loginState, adminState } = useOutletContext();
 
   return (
     <div className="grid grid-cols-2 w-full md:grid-cols-4 xl:grid-cols-5">
@@ -13,6 +13,8 @@ const homepage = () => {
         <SideBar
           selectedCatagory={selectedCatagory}
           setSelectedCatagory={setSelectedCatagory}
+          loginState={loginState}
+          adminState={adminState}
         />
       </div>
 

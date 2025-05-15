@@ -9,6 +9,7 @@ const MainLayout = () => {
   const [selectedCatagory, setSelectedCatagory] = useState("none");
   const [loginState, setLoginState] = useState(false);
   const [adminState, setAdminState] = useState(false);
+  const [onAdmin, setOnAdmin] = useState(false);
 
   return (
     <div className="flex flex-col min-h-dvh max-h-full w-full">
@@ -20,7 +21,18 @@ const MainLayout = () => {
       />
       <div className="relative flex-grow bg-white">
         <div className="z-10">
-          <Outlet context={{ selectedCatagory, setSelectedCatagory, loginState, setLoginState, adminState, setAdminState }} />
+          <Outlet
+            context={{
+              selectedCatagory,
+              setSelectedCatagory,
+              loginState,
+              setLoginState,
+              adminState,
+              setAdminState,
+              onAdmin,
+              setOnAdmin
+            }}
+          />
         </div>
 
         <div
@@ -45,6 +57,8 @@ const MainLayout = () => {
             setIsMenuVisible={setIsMenuVisible}
             loginState={loginState}
             adminState={adminState}
+            onAdmin={onAdmin}
+            setOnAdmin={setOnAdmin}
           />
         </div>
       </div>

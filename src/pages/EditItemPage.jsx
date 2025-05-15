@@ -1,10 +1,17 @@
-import SearchBar from "../components/SearchBar";
-import ItemList from "../components/ItemList";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import SideBar from "../components/SideBar";
-import { useOutletContext } from "react-router-dom";
 
-const homepage = () => {
-  const { selectedCatagory, setSelectedCatagory, loginState, adminState, onAdmin, setOnAdmin } = useOutletContext();
+const EditItemPage = () => {
+  const {
+    selectedCatagory,
+    setSelectedCatagory,
+    loginState,
+    adminState,
+    onAdmin,
+    setOnAdmin,
+  } = useOutletContext();
+
+  const navigate = useNavigate();
 
   return (
     <div className="grid grid-cols-2 w-full md:grid-cols-4 xl:grid-cols-5">
@@ -22,13 +29,10 @@ const homepage = () => {
 
       {/* Search Bar & ItemList */}
       <div className="col-span-2 md:col-span-3 xl:col-span-4">
-        <div className="flex flex-row justify-center items-center px-2 pt-4 pb-0 md:hidden">
-          <SearchBar />
-        </div>
-        <ItemList selectedCatagory={selectedCatagory} />
+        Edit Item Page
       </div>
     </div>
   );
-};
+}
 
-export default homepage;
+export default EditItemPage

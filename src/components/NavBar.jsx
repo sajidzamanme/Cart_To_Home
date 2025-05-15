@@ -12,7 +12,7 @@ const NavBar = ({ isMenuVisible, setIsMenuVisible, loginState, setLoginState }) 
       <div className="absolute flex flex-row items-center md:hidden md:w-fit">
         <Link
           to={"/"}
-          className="w-full text-center text-2xl text-white font-bold md:text-nowrap sm:text-3xl"
+          className="w-full text-center text-2xl text-white font-bold md:text-nowrap xs:text-5xl sm:text-3xl"
         >
           Cart To Home
         </Link>
@@ -63,7 +63,7 @@ const NavBar = ({ isMenuVisible, setIsMenuVisible, loginState, setLoginState }) 
           }} />
         ) : (
           <Link to={"/signup-login"}>
-            <CustomBtn label={"Signup/Login"} classList="p-1 sm:p-2 md:p-3" />
+            <CustomBtn label={"Account"} classList="px-3 py-3 font-medium" />
           </Link>
         )}
       </div>

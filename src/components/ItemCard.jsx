@@ -9,7 +9,7 @@ const ItemCard = ({ item }) => {
     item.name.length > 17 ? item.name.slice(0, 17) + "..." : item.name;
 
   return (
-    <div className="w-full border rounded-md hover:bg-[#DBE2EF]">
+    <div className="w-full rounded-md shadow-[0px_0px_10px_0.5px_rgb(199,224,255)] hover:bg-[#c7e0ff]">
       {/* Image */}
       <img
         src={imgSrc}

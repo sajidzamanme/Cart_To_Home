@@ -31,41 +31,29 @@ const LoginBox = ({ setPage }) => {
 
   return (
     <div className="flex flex-col justify-center items-center h-full w-full">
-      <div className="flex flex-col justify-start items-start bg-[#DBE2EF] gap-6 rounded-xl px-4 py-10">
+      <div className="flex flex-col justify-start items-start w-[19rem] bg-[#DBE2EF] gap-6 rounded-xl px-4 py-10 
+      sm:w-[21rem] md:w-[22rem] lg:w-[23rem] xl:w-[24rem] 2xl:w-[25rem]">
         <h1 className="flex flex-row justify-center items-center w-full text-5xl text-[#3F72AF] font-medium">
           Login
         </h1>
-        <div className="flex flex-col gap-3 justify-center items-start">
-          <div className="flex flex-row justify-start items-center">
-            <label
-              htmlFor="username"
-              className="w-[5rem] text-[#3F72AF] font-medium"
-            >
-              Username:
-            </label>
-            <input
-              value={name}
-              type="text"
-              name="username"
-              className="text-[#3F72AF] rounded-md bg-[#F9F7F7] h-8"
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div className="flex flex-row justify-start items-center">
-            <label
-              htmlFor="password"
-              className="w-[5rem] text-[#3F72AF] font-medium"
-            >
-              Password:
-            </label>
-            <input
-              value={pass}
-              type="password"
-              name="password"
-              className="text-[#3F72AF] rounded-md bg-[#F9F7F7] h-8"
-              onChange={(e) => setPass(e.target.value)}
-            />
-          </div>
+        <div className="flex flex-col gap-3 justify-center items-start w-full">
+          <input
+            value={name}
+            type="text"
+            name="username"
+            className="w-full text-[#3F72AF] rounded-md bg-[#F9F7F7] h-8 pl-4 placeholder:text-[#3F72AF] "
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Username"
+          />
+
+          <input
+            value={pass}
+            type="password"
+            name="password"
+            className="w-full text-[#3F72AF] rounded-md bg-[#F9F7F7] h-8 pl-4 placeholder:text-[#3F72AF] "
+            onChange={(e) => setPass(e.target.value)}
+            placeholder="Password"
+          />
           <h1 className="text-sm text-[#3F72AF] text-center self-center hover:text-[#112D4E]">
             Forgot Password
           </h1>

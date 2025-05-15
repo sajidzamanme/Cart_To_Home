@@ -41,7 +41,7 @@ const LoginBox = ({ setPage }) => {
             value={name}
             type="text"
             name="username"
-            className="w-full text-[#3F72AF] rounded-md bg-[#F9F7F7] h-8 pl-4 placeholder:text-[#3F72AF] "
+            className="w-full text-[#3F72AF] rounded-md bg-[#F9F7F7] h-12 pl-4 placeholder:text-[#3F72AF] "
             onChange={(e) => setName(e.target.value)}
             placeholder="Username"
           />
@@ -50,7 +50,7 @@ const LoginBox = ({ setPage }) => {
             value={pass}
             type="password"
             name="password"
-            className="w-full text-[#3F72AF] rounded-md bg-[#F9F7F7] h-8 pl-4 placeholder:text-[#3F72AF] "
+            className="w-full text-[#3F72AF] rounded-md bg-[#F9F7F7] h-12 pl-4 placeholder:text-[#3F72AF] "
             onChange={(e) => setPass(e.target.value)}
             placeholder="Password"
           />

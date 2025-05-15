@@ -1,11 +1,14 @@
 import CustomBtn from "./CustomBtn";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = ({ isMenuVisible, setIsMenuVisible, loginState, setLoginState }) => {
   const openMenu = () => {
     setIsMenuVisible((prevState) => !prevState);
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className="relative flex flex-row items-center justify-center bg-[#3F72AF]">
@@ -58,8 +61,9 @@ const NavBar = ({ isMenuVisible, setIsMenuVisible, loginState, setLoginState }) 
         </div>
 
         {loginState ? (
-          <CustomBtn label="Logout" classList="p-1 sm:p-2 md:p-3" onClickFunc={() => {
+          <CustomBtn label="Logout" classList="px-3 py-3 font-medium" onClickFunc={() => {
             setLoginState(false)
+            navigate("/")
           }} />
         ) : (
           <Link to={"/signup-login"}>

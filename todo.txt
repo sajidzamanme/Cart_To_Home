@@ -5,3 +5,4 @@
 5. [X] Implement Cross on MenuOpen
 6. [X] Implement SideBar Animation
 7. [ ] Try Infinite scrolling
+8. [ ] Admin Panel Functionalities

@@ -15,7 +15,7 @@ const SideBarTile = ({
           );
           setIsMenuVisible((prevState) => !prevState);
         }}
-        className={`flex flex-row items-center justify-between w-full p-2 rounded-lg text-left hover:bg-[#DBE2EF] ${
+        className={`flex flex-row items-center justify-between w-full p-2 rounded-lg text-left shadow-[0px_0px_3px_1px_rgb(199,224,255)] hover:bg-[#DBE2EF] ${
           selectedCatagory === label.toLowerCase() ? "bg-[#DBE2EF]" : ""
         }`}
       >

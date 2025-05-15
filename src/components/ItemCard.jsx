@@ -21,7 +21,7 @@ const ItemCard = ({ item }) => {
       {/* Name & Details */}
       <div className="px-2 pb-1">
         <h1 className="font-semibold text-[#3F72AF]">{showedName}</h1>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between items-center">
           <h1 className="font-medium text-[#3F72AF]">{item.price}tk</h1>
           <div className="flex flex-row gap-1">
             {Array.from({ length: item.review }).map((_, index) => {

@@ -7,16 +7,20 @@ import { Outlet } from "react-router-dom";
 const MainLayout = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [selectedCatagory, setSelectedCatagory] = useState("none");
+  const [loginState, setLoginState] = useState(false);
+  const [adminState, setAdminState] = useState(false);
 
   return (
     <div className="flex flex-col min-h-dvh max-h-full w-full">
       <NavBar
         isMenuVisible={isMenuVisible}
         setIsMenuVisible={setIsMenuVisible}
+        loginState={loginState}
+        setLoginState={setLoginState}
       />
       <div className="relative flex-grow">
-        <div className="z-10">
-          <Outlet context={{ selectedCatagory, setSelectedCatagory }} />
+        <div className="z-10 bg-[#F9F7F7]">
+          <Outlet context={{ selectedCatagory, setSelectedCatagory, setLoginState, setAdminState }} />
         </div>
 
         <div
@@ -39,6 +43,8 @@ const MainLayout = () => {
             selectedCatagory={selectedCatagory}
             setSelectedCatagory={setSelectedCatagory}
             setIsMenuVisible={setIsMenuVisible}
+            loginState={loginState}
+            adminState={adminState}
           />
         </div>
       </div>

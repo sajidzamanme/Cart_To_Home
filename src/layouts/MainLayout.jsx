@@ -18,7 +18,7 @@ const MainLayout = () => {
         loginState={loginState}
         setLoginState={setLoginState}
       />
-      <div className="relative flex-grow bg-[#F9F7F7]">
+      <div className="relative flex-grow bg-white">
         <div className="z-10">
           <Outlet context={{ selectedCatagory, setSelectedCatagory, loginState, setLoginState, adminState, setAdminState }} />
         </div>

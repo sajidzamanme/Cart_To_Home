@@ -3,4 +3,5 @@
 3. [X] Implement page numbers on search result
 4. [X] Implement Select by catagory
 5. [X] Implement Cross on MenuOpen
-6. [ ] Try Infinite scrolling
+6. [X] Implement SideBar Animation
+7. [ ] Try Infinite scrolling

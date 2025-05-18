@@ -9,13 +9,13 @@
 08. [X] Implement Remove Functionality
 09. [X] Implement searching item to remove on RemoveItemPage
 10. [ ] Implement Infinite scrolling on RemoveItemPage
-11. [ ] Implement Dropdown Catagories in SideBar
+11. [X] Implement Dropdown Catagories in SideBar
 12. [ ] Implement Item Page
 13. [ ] Implement cart and checkout
 14. [X] Fix pagenumber issue while searching
 15. [X] Fix "." issue while searching
 16. [X] Implement button to clear search
-17. [ ] Improve consistency and usability
+17. [ ] Improve documentation, consistency and usability
 
 
 

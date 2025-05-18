@@ -13,6 +13,7 @@
 12. [ ] Implement Item Page
 13. [ ] Implement cart and checkout
 14. [X] Fix pagenumber issue while searching
+15. [X] Fix "." issue while searching
 
 
 

@@ -12,7 +12,7 @@
 11. [ ] Implement Dropdown Catagories in SideBar
 12. [ ] Implement Item Page
 13. [ ] Implement cart and checkout
-14. [ ] Fix pagenumber issue while searching
+14. [X] Fix pagenumber issue while searching
 
 
 

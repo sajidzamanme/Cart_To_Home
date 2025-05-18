@@ -37,7 +37,7 @@ const homepage = () => {
         </div>
         <ItemList
           selectedCatagory={selectedCatagory}
-          searchLine={searchLine.toLowerCase()}
+          searchLine={searchLine.trim().toLowerCase()}
         />
       </div>
     </div>

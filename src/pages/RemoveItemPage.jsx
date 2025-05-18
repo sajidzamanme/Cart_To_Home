@@ -40,7 +40,7 @@ const RemoveItemPage = () => {
           </div>
         </div>
 
-        <RemoveForm searchLine={searchLine.toLowerCase()} />
+        <RemoveForm searchLine={searchLine.trim().toLowerCase()} />
       </div>
     </div>
   );

@@ -1,30 +1,36 @@
 import { useState } from "react";
 import CustomBtn from "../components/CustomBtn";
 import useItemStore from "../stores/useItemStore";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const AddForm = () => {
+const EditForm = () => {
   const itemStore = useItemStore();
+
+  const location = useLocation();
+  const { item } = location.state || {};
 
   const navigate = useNavigate();
 
   const [newItem, setNewItem] = useState({
-    id:
-      itemStore.items.length > 0
-        ? Number(itemStore.items[itemStore.items.length - 1].id) + 1
-        : 1,
-    name: "",
-    catagory: "",
-    price: "",
-    description: "",
-    imageLocation: "",
-    review: "",
+    id: item.id,
+    name: item.name,
+    catagory: item.catagory,
+    price: item.price,
+    description: item.description,
+    imageLocation: item.imageLocation,
+    review: item.review,
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    itemStore.setItems([...itemStore.items, newItem]);
-    navigate("/admin-panel");
+    const tempItems = itemStore.items;
+    tempItems.forEach((temp, index) => {
+      if (temp.id === item.id) {
+        tempItems[index] = newItem;
+      }
+    });
+    itemStore.setItems(tempItems);
+    navigate("/admin-panel/edit");
   };
 
   return (
@@ -33,7 +39,7 @@ const AddForm = () => {
         onSubmit={handleSubmit}
         className="flex flex-col w-[23.5rem] gap-2.5 px-5 py-10 bg-[#DBE2EF] rounded-lg"
       >
-        <h1 className="text-3xl self-center mb-4 font-medium">Add Item:</h1>
+        <h1 className="text-3xl self-center mb-4 font-medium">Edit Item:</h1>
         <input
           value={newItem.name}
           type="text"
@@ -117,7 +123,7 @@ const AddForm = () => {
         />
 
         <CustomBtn
-          label="Add"
+          label="Submit"
           bgCol="bg-[#F9F7F7]"
           hoverEffect="hover:bg-[#d3e8ff] hover:border-1 hover:border-white"
           classList="font-medium mt-3 w-3/5 self-center border-1 border-[#000000]"
@@ -127,4 +133,4 @@ const AddForm = () => {
   );
 };
 
-export default AddForm;
+export default EditForm;

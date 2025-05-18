@@ -5,7 +5,7 @@
 05. [X] Implement Cross on MenuOpen
 06. [X] Implement SideBar Animation
 07. [X] Implement Add Functionality
-07. [ ] Implement Edit Functionality
+07. [X] Implement Edit Functionality
 08. [X] Implement Remove Functionality
 09. [X] Implement searching item to remove on RemoveItemPage
 10. [ ] Implement Infinite scrolling on RemoveItemPage

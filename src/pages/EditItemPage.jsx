@@ -33,6 +33,6 @@ const EditItemPage = () => {
       </div>
     </div>
   );
-}
+};
 
-export default EditItemPage
+export default EditItemPage;

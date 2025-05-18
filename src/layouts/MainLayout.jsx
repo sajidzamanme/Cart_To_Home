@@ -23,8 +23,8 @@ const MainLayout = () => {
         searchLine={searchLine}
         setSearchLine={setSearchLine}
       />
-      <div className="relative flex-grow bg-white">
-        <div className="z-10">
+      <div className="relative h-full flex-grow bg-white">
+        <div className="z-10 h-full">
           <Outlet
             context={{
               selectedCatagory,
@@ -36,7 +36,7 @@ const MainLayout = () => {
               onAdmin,
               setOnAdmin,
               searchLine,
-              setSearchLine
+              setSearchLine,
             }}
           />
         </div>

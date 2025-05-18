@@ -12,14 +12,12 @@ const homepage = () => {
     adminState,
     onAdmin,
     setOnAdmin,
-    searchLine, 
-    setSearchLine
+    searchLine,
+    setSearchLine,
   } = useOutletContext();
 
-  
-
   return (
-    <div className="grid grid-cols-2 w-full md:grid-cols-4 xl:grid-cols-5">
+    <div className="grid grid-cols-2 h-full w-full md:grid-cols-4 xl:grid-cols-5">
       {/* SideBar */}
       <div className="hidden h-full md:flex">
         <SideBar
@@ -37,7 +35,10 @@ const homepage = () => {
         <div className="flex flex-row justify-center items-center px-2 pt-4 pb-0 md:hidden">
           <SearchBar searchLine={searchLine} setSearchLine={setSearchLine} />
         </div>
-        <ItemList selectedCatagory={selectedCatagory} searchLine={searchLine.toLowerCase()} />
+        <ItemList
+          selectedCatagory={selectedCatagory}
+          searchLine={searchLine.toLowerCase()}
+        />
       </div>
     </div>
   );

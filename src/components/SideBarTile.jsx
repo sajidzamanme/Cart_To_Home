@@ -25,7 +25,7 @@ const SideBarTile = ({
             selectedCatagory === label.toLowerCase() ? "flex" : "hidden"
           } flex-row justify-center items-center size-6 rounded-lg hover:bg-[#F9F7F7]`}
         >
-          <MdOutlineRemoveCircle className="text-[#112D4E]"/>
+          <MdOutlineRemoveCircle className="text-[#112D4E]" />
         </h1>
       </button>
     </div>

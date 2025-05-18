@@ -15,6 +15,7 @@ import AdminPanelPage from "./pages/AdminPanelPage";
 import AddItemPage from "./pages/AddItemPage";
 import EditItemPage from "./pages/EditItemPage";
 import RemoveItemPage from "./pages/RemoveItemPage";
+import EditForm from "./components/EditForm";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="admin-panel" element={<AdminPanelPage />} />
       <Route path="admin-panel/add" element={<AddItemPage />} />
       <Route path="admin-panel/edit" element={<EditItemPage />} />
+      <Route path="admin-panel/edit/form" element={<EditForm />} />
       <Route path="admin-panel/remove" element={<RemoveItemPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>

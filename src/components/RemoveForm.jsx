@@ -1,11 +1,20 @@
 import { useNavigate } from "react-router-dom";
 import useItemStore from "../stores/useItemStore";
 import SlimItemCard from "./SlimItemCard";
+import { IoTrash } from "react-icons/io5";
 
 const RemoveForm = ({ searchLine }) => {
   const itemStore = useItemStore();
 
   const navigate = useNavigate();
+
+  const handleRemove = (item) => {
+    itemStore.setItems(
+      itemStore.items.filter((current) => {
+        return current.id != item.id;
+      })
+    );
+  };
 
   return (
     <div className="flex flex-col items-center py-4 px-6 w-full">
@@ -15,7 +24,18 @@ const RemoveForm = ({ searchLine }) => {
             item.name.toLowerCase().includes(searchLine) ||
             item.catagory.toLowerCase().includes(searchLine)
           ) {
-            return <SlimItemCard key={item.id} item={item} />;
+            return (
+              <SlimItemCard
+                key={item.id}
+                item={item}
+                btnIcon={
+                  <IoTrash
+                    className="size-6 hover:text-red-600"
+                    onClick={() => handleRemove(item)}
+                  />
+                }
+              />
+            );
           }
         })}
       </div>

@@ -15,7 +15,7 @@ const SideBar = ({
   setOnAdmin,
 }) => {
   const itemStore = useItemStore();
-  const [isCatagoryClicked, setIsCatagoryClicked] = useState(false);
+  const [isCatagoryClicked, setIsCatagoryClicked] = useState(true);
 
   const itemCatagories = [
     ...new Set(itemStore.items.map((item) => item.catagory)),
@@ -57,7 +57,7 @@ const SideBar = ({
         </button>
 
         <div
-          className={`flex flex-col gap-2 pb-1 w-full overflow-hidden transform transition-all duration-500 ease-in-out ${
+          className={`flex flex-col gap-2 w-full overflow-hidden transform transition-all duration-500 ease-in-out ${
             isCatagoryClicked ? "max-h-full" : "max-h-0"
           }`}
         >

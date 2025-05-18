@@ -16,6 +16,7 @@
 15. [X] Fix "." issue while searching
 16. [X] Implement button to clear search
 17. [ ] Improve documentation, consistency and usability
+18. [ ] Improve pagination logic
 
 
 

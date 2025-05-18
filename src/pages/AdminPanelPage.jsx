@@ -32,9 +32,21 @@ const AdminPanelPage = () => {
       <div className="col-span-2 md:col-span-3 xl:col-span-4">
         <div className="flex flex-col justify-center items-center w-full">
           <div className="flex flex-col justify-center items-center gap-4 w-[23rem] rounded-xl mt-12 py-10 bg-[#6090ca]">
-            <CustomBtn label="Add Item" classList="p-5 w-[35%]" onClickFunc={() => navigate("/admin-panel/add")} />
-            <CustomBtn label="Edit Item" classList="p-5 w-[35%]" onClickFunc={() => navigate("/admin-panel/edit")} />
-            <CustomBtn label="Remove Item" classList="p-5 w-[35%]" onClickFunc={() => navigate("/admin-panel/remove")} />
+            <CustomBtn
+              label="Add Item"
+              classList="p-5 w-[35%]"
+              onClickFunc={() => navigate("/admin-panel/add")}
+            />
+            <CustomBtn
+              label="Edit Item"
+              classList="p-5 w-[35%]"
+              onClickFunc={() => navigate("/admin-panel/edit")}
+            />
+            <CustomBtn
+              label="Remove Item"
+              classList="p-5 w-[35%]"
+              onClickFunc={() => navigate("/admin-panel/remove")}
+            />
           </div>
         </div>
       </div>

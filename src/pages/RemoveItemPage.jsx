@@ -1,5 +1,8 @@
 import { useNavigate, useOutletContext } from "react-router-dom";
 import SideBar from "../components/SideBar";
+import RemoveForm from "../components/RemoveForm";
+import SearchBar from "../components/SearchBar";
+import { useState } from "react";
 
 const RemoveItemPage = () => {
   const {
@@ -10,6 +13,8 @@ const RemoveItemPage = () => {
     onAdmin,
     setOnAdmin,
   } = useOutletContext();
+
+  const [searchLine, setSearchLine] = useState("");
 
   const navigate = useNavigate();
 
@@ -28,11 +33,17 @@ const RemoveItemPage = () => {
       </div>
 
       {/* Search Bar & ItemList */}
-      <div className="col-span-2 md:col-span-3 xl:col-span-4">
-        Remove Item Page
+      <div className="col-span-2 w-full md:col-span-3 xl:col-span-4">
+        <div className="w-full px-6 mt-4">
+          <div className="flex flex-col items-center justify-center w-[98%] max-w-[50rem] place-self-center">
+            <SearchBar searchLine={searchLine} setSearchLine={setSearchLine} />
+          </div>
+        </div>
+
+        <RemoveForm searchLine={searchLine.toLowerCase()} />
       </div>
     </div>
   );
-}
+};
 
-export default RemoveItemPage
+export default RemoveItemPage;

@@ -1,5 +1,6 @@
 import { useNavigate, useOutletContext } from "react-router-dom";
 import SideBar from "../components/SideBar";
+import AddForm from "../components/AddForm";
 
 const AddItemPage = () => {
   const {
@@ -29,7 +30,7 @@ const AddItemPage = () => {
 
       {/* Search Bar & ItemList */}
       <div className="col-span-2 md:col-span-3 xl:col-span-4">
-        Add Item Page
+        <AddForm />
       </div>
     </div>
   );

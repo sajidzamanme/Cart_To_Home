@@ -3,7 +3,14 @@ import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const NavBar = ({ isMenuVisible, setIsMenuVisible, loginState, setLoginState }) => {
+const NavBar = ({
+  isMenuVisible,
+  setIsMenuVisible,
+  loginState,
+  setLoginState,
+  searchLine,
+  setSearchLine,
+}) => {
   const openMenu = () => {
     setIsMenuVisible((prevState) => !prevState);
   };
@@ -57,17 +64,26 @@ const NavBar = ({ isMenuVisible, setIsMenuVisible, loginState, setLoginState }) 
         </div>
 
         <div className="hidden flex-row w-full px-3 md:flex">
-          <SearchBar />
+          <SearchBar searchLine={searchLine} setSearchLine={setSearchLine} />
         </div>
 
         {loginState ? (
-          <CustomBtn label="Logout" classList="px-3 py-3 font-medium" onClickFunc={() => {
-            setLoginState(false)
-            navigate("/")
-          }} />
+          <CustomBtn
+            label="Logout"
+            padding="px-3 py-3"
+            classList="font-medium"
+            onClickFunc={() => {
+              setLoginState(false);
+              navigate("/");
+            }}
+          />
         ) : (
           <Link to={"/signup-login"}>
-            <CustomBtn label={"Account"} classList="px-3 py-3 font-medium" />
+            <CustomBtn
+              label={"Account"}
+              padding="px-3 py-3"
+              classList="font-medium"
+            />
           </Link>
         )}
       </div>

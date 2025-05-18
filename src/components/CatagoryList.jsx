@@ -3,7 +3,7 @@ import useItemStore from "../stores/useItemStore";
 import ItemCard from "./ItemCard";
 import PageBar from "./PageBar";
 
-const CatagoryList = ({ selectedCatagory }) => {
+const CatagoryList = ({ selectedCatagory, searchLine }) => {
   const itemStore = useItemStore();
   const selectedItems = itemStore.items.filter(
     (item) => item.catagory == selectedCatagory
@@ -18,8 +18,13 @@ const CatagoryList = ({ selectedCatagory }) => {
     <>
       {selectedItems
         .slice(pageNumber * itemPerPage - itemPerPage, pageNumber * itemPerPage)
-        .map((found) => {
-          return <ItemCard key={found.id} item={found} />;
+        .map((item) => {
+          if (
+            item.name.toLowerCase().includes(searchLine) ||
+            item.catagory.toLowerCase().includes(searchLine)
+          ) {
+            return <ItemCard key={item.id} item={item} />;
+          }
         })}
 
       <PageBar

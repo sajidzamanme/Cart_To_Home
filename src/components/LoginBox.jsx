@@ -8,7 +8,8 @@ const LoginBox = ({ setPage }) => {
   const [pass, setPass] = useState("");
   const navigate = useNavigate();
 
-  const onContinue = async () => {
+  const onContinue = async (event) => {
+    event.preventDefault();
     let flag = false;
     try {
       const response = await axios.get("/api/users.json");
@@ -31,12 +32,17 @@ const LoginBox = ({ setPage }) => {
 
   return (
     <div className="flex flex-col justify-center items-center h-full w-full">
-      <div className="flex flex-col justify-start items-start w-[19rem] bg-[#DBE2EF] gap-6 rounded-xl px-4 py-10 
-      sm:w-[21rem] md:w-[22rem] lg:w-[23rem] xl:w-[24rem] 2xl:w-[25rem]">
+      <div
+        className="flex flex-col justify-start items-start w-[19rem] bg-[#DBE2EF] gap-6 rounded-xl px-4 py-10 
+      sm:w-[21rem] md:w-[22rem] lg:w-[23rem] xl:w-[24rem] 2xl:w-[25rem]"
+      >
         <h1 className="flex flex-row justify-center items-center w-full text-5xl text-[#3F72AF] font-medium">
           Login
         </h1>
-        <div className="flex flex-col gap-3 justify-center items-start w-full">
+        <form
+          onSubmit={onContinue}
+          className="flex flex-col gap-3 justify-center items-start w-full"
+        >
           <input
             value={name}
             type="text"
@@ -59,7 +65,7 @@ const LoginBox = ({ setPage }) => {
           </h1>
 
           <button
-            onClick={onContinue}
+            type="submit"
             className="bg-[#F9F7F7] rounded-lg p-2 self-center text-center text-xl hover:bg-[#f0f7ff]"
           >
             Continue
@@ -67,11 +73,12 @@ const LoginBox = ({ setPage }) => {
 
           <button
             onClick={() => setPage("signup")}
+            type="button"
             className="text-sm text-[#3F72AF] self-center hover:text-[#112D4E]"
           >
             Don't have an account?
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );

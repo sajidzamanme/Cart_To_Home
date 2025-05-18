@@ -11,6 +11,8 @@ const MainLayout = () => {
   const [adminState, setAdminState] = useState(false);
   const [onAdmin, setOnAdmin] = useState(false);
 
+  const [searchLine, setSearchLine] = useState("");
+
   return (
     <div className="flex flex-col min-h-dvh max-h-full w-full">
       <NavBar
@@ -18,6 +20,8 @@ const MainLayout = () => {
         setIsMenuVisible={setIsMenuVisible}
         loginState={loginState}
         setLoginState={setLoginState}
+        searchLine={searchLine}
+        setSearchLine={setSearchLine}
       />
       <div className="relative flex-grow bg-white">
         <div className="z-10">
@@ -30,7 +34,9 @@ const MainLayout = () => {
               adminState,
               setAdminState,
               onAdmin,
-              setOnAdmin
+              setOnAdmin,
+              searchLine,
+              setSearchLine
             }}
           />
         </div>

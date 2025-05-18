@@ -1,8 +1,25 @@
-1. [ ] Implement Search
-2. [X] Implement page number on homepage
-3. [X] Implement page numbers on search result
-4. [X] Implement Select by catagory
-5. [X] Implement Cross on MenuOpen
-6. [X] Implement SideBar Animation
-7. [ ] Try Infinite scrolling
-8. [ ] Admin Panel Functionalities
+01. [X] Implement Search
+02. [X] Implement page number on homepage
+03. [X] Implement page numbers on search result
+04. [X] Implement Select by catagory
+05. [X] Implement Cross on MenuOpen
+06. [X] Implement SideBar Animation
+07. [X] Implement Add Functionality
+07. [ ] Implement Edit Functionality
+08. [X] Implement Remove Functionality
+09. [X] Implement searching item to remove on RemoveItemPage
+10. [ ] Implement Infinite scrolling on RemoveItemPage
+11. [ ] Implement Dropdown Catagories in SideBar
+12. [ ] Implement Item Page
+13. [ ] Implement cart and checkout
+14. [ ] Fix pagenumber issue while searching
+
+
+
+
+
+
+
+
+
+*place-item-center

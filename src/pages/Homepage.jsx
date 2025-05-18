@@ -2,9 +2,21 @@ import SearchBar from "../components/SearchBar";
 import ItemList from "../components/ItemList";
 import SideBar from "../components/SideBar";
 import { useOutletContext } from "react-router-dom";
+import { useState } from "react";
 
 const homepage = () => {
-  const { selectedCatagory, setSelectedCatagory, loginState, adminState, onAdmin, setOnAdmin } = useOutletContext();
+  const {
+    selectedCatagory,
+    setSelectedCatagory,
+    loginState,
+    adminState,
+    onAdmin,
+    setOnAdmin,
+    searchLine, 
+    setSearchLine
+  } = useOutletContext();
+
+  
 
   return (
     <div className="grid grid-cols-2 w-full md:grid-cols-4 xl:grid-cols-5">
@@ -23,9 +35,9 @@ const homepage = () => {
       {/* Search Bar & ItemList */}
       <div className="col-span-2 md:col-span-3 xl:col-span-4">
         <div className="flex flex-row justify-center items-center px-2 pt-4 pb-0 md:hidden">
-          <SearchBar />
+          <SearchBar searchLine={searchLine} setSearchLine={setSearchLine} />
         </div>
-        <ItemList selectedCatagory={selectedCatagory} />
+        <ItemList selectedCatagory={selectedCatagory} searchLine={searchLine.toLowerCase()} />
       </div>
     </div>
   );

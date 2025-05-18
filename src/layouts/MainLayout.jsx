@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import SideBar from "../components/SideBar";
@@ -13,6 +13,12 @@ const MainLayout = () => {
 
   const [searchLine, setSearchLine] = useState("");
 
+  useEffect(() => {
+    setIsMenuVisible(false);
+    setSelectedCatagory("none");
+    setOnAdmin(false);
+  }, []);
+
   return (
     <div className="flex flex-col min-h-dvh max-h-full w-full">
       <NavBar
@@ -22,6 +28,8 @@ const MainLayout = () => {
         setLoginState={setLoginState}
         searchLine={searchLine}
         setSearchLine={setSearchLine}
+        setSelectedCatagory={setSelectedCatagory}
+        setOnAdmin={setOnAdmin}
       />
       <div className="relative h-full flex-grow bg-white">
         <div className="z-10 h-full">

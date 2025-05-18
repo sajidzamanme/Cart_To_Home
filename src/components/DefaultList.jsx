@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import useItemStore from "../stores/useItemStore";
 import ItemCard from "./ItemCard";
 import PageBar from "./PageBar";
-import { HiH1 } from "react-icons/hi2";
 
 const DefaultList = ({ searchLine }) => {
   const itemStore = useItemStore();
-  const itemPerPage = 6;
+  const itemPerPage = 16;
 
   const [pageNumber, setPageNumber] = useState(1);
 

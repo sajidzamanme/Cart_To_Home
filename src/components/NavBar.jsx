@@ -10,6 +10,8 @@ const NavBar = ({
   setLoginState,
   searchLine,
   setSearchLine,
+  setSelectedCatagory,
+  setOnAdmin,
 }) => {
   const openMenu = () => {
     setIsMenuVisible((prevState) => !prevState);
@@ -23,6 +25,11 @@ const NavBar = ({
         <Link
           to={"/"}
           className="w-full text-center text-2xl text-white font-bold md:text-nowrap xs:text-5xl sm:text-3xl"
+          onClick={() => {
+            setIsMenuVisible(false);
+            setSelectedCatagory("none");
+            setOnAdmin(false);
+          }}
         >
           Cart To Home
         </Link>

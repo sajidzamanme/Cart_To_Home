@@ -14,7 +14,8 @@
 13. [ ] Implement cart and checkout
 14. [X] Fix pagenumber issue while searching
 15. [X] Fix "." issue while searching
-
+16. [X] Implement button to clear search
+17. [ ] Improve consistency and usability
 
 
 

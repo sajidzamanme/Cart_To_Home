@@ -16,10 +16,12 @@ import AddItemPage from "./pages/AddItemPage";
 import EditItemPage from "./pages/EditItemPage";
 import RemoveItemPage from "./pages/RemoveItemPage";
 import EditForm from "./components/EditForm";
+import ItemPage from "./pages/ItemPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
+      <Route path="item/:id" element={<ItemPage />} />
       <Route index element={<HomePage />} />
       <Route path="signup-login" element={<LoginPage />} />
       <Route path="admin-panel" element={<AdminPanelPage />} />

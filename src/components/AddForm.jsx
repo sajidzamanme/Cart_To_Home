@@ -2,6 +2,7 @@ import { useState } from "react";
 import CustomBtn from "../components/CustomBtn";
 import useItemStore from "../stores/useItemStore";
 import { useNavigate } from "react-router-dom";
+import GoBackBtn from "./GoBackBtn";
 
 const AddForm = () => {
   const itemStore = useItemStore();
@@ -29,6 +30,9 @@ const AddForm = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-full w-full mt-12">
+      <div className="flex flex-col items-start w-[23.5rem]">
+        <GoBackBtn />
+      </div>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col w-[23.5rem] gap-2.5 px-5 py-10 bg-[#DBE2EF] rounded-lg"

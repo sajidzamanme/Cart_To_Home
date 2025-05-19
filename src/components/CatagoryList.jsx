@@ -3,7 +3,7 @@ import useItemStore from "../stores/useItemStore";
 import ItemCard from "./ItemCard";
 import PageBar from "./PageBar";
 
-const CatagoryList = ({ selectedCatagory, searchLine }) => {
+const CatagoryList = ({ selectedCatagory, searchLine = "" }) => {
   const itemStore = useItemStore();
   const selectedItems = itemStore.items.filter(
     (item) => item.catagory == selectedCatagory

@@ -1,13 +1,14 @@
-import CustomBtn from "./CustomBtn";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { FaUser } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 
 const NavBar = ({
   isMenuVisible,
   setIsMenuVisible,
   loginState,
-  setLoginState,
+  setShowLogoutMenu,
   searchLine,
   setSearchLine,
   setSelectedCatagory,
@@ -74,25 +75,21 @@ const NavBar = ({
           <SearchBar searchLine={searchLine} setSearchLine={setSearchLine} />
         </div>
 
-        {loginState ? (
-          <CustomBtn
-            label="Logout"
-            padding="px-3 py-3"
-            classList="font-medium"
-            onClickFunc={() => {
-              setLoginState(false);
-              navigate("/");
+        <div className="flex flex-row items-center justify-center gap-4">
+          <FaShoppingCart className="text-white size-7"/>
+          <button
+            onClick={() => {
+              if (loginState) {
+                setShowLogoutMenu((prevState) => !prevState);
+              } else {
+                navigate("/signup-login");
+              }
             }}
-          />
-        ) : (
-          <Link to={"/signup-login"}>
-            <CustomBtn
-              label={"Account"}
-              padding="px-3 py-3"
-              classList="font-medium"
-            />
-          </Link>
-        )}
+            className="mr-4 flex flex-row items-center justify-center"
+          >
+            <FaUser className="text-white size-6" />
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import SearchBar from "../components/SearchBar";
 import { useState } from "react";
 import useItemStore from "../stores/useItemStore";
 import { FaRegEdit } from "react-icons/fa";
+import GoBackBtn from "../components/GoBackBtn";
 
 const EditItemPage = () => {
   const {
@@ -43,7 +44,10 @@ const EditItemPage = () => {
       {/* Search Bar & ItemList */}
       <div className="col-span-2 w-full md:col-span-3 xl:col-span-4">
         <div className="w-full px-6 mt-4">
-          <div className="flex flex-col items-center justify-center w-[98%] max-w-[50rem] place-self-center">
+          <div className="flex flex-row items-center justify-center w-[98%] max-w-[50rem] place-self-center">
+            <div className="hidden md:flex">
+              <GoBackBtn />
+            </div>
             <SearchBar searchLine={searchLine} setSearchLine={setSearchLine} />
           </div>
         </div>

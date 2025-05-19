@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import defaultImage from "/img/default.jpeg";
 import starIcon from "/img/starIcon.png";
+import { Link } from "react-router-dom";
 
 const ItemCard = ({ item }) => {
   const [imgSrc, setImageSrc] = useState(item.imageLocation);
@@ -9,7 +10,7 @@ const ItemCard = ({ item }) => {
     item.name.length > 17 ? item.name.slice(0, 17) + "..." : item.name;
 
   return (
-    <div className="w-full rounded-md shadow-[0px_0px_10px_0.5px_rgb(199,224,255)] hover:bg-[#c7e0ff]">
+    <Link to={`/item/${item.id}`} className="w-full rounded-md shadow-[0px_0px_10px_0.5px_rgb(199,224,255)] hover:bg-[#c7e0ff]">
       {/* Image */}
       <img
         src={imgSrc}
@@ -32,7 +33,7 @@ const ItemCard = ({ item }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

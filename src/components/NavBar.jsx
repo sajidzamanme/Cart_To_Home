@@ -66,6 +66,11 @@ const NavBar = ({
           <Link
             to={"/"}
             className="w-full text-center font-bold md:text-nowrap"
+            onClick={() => {
+              setIsMenuVisible(false);
+              setSelectedCatagory("none");
+              setOnAdmin(false);
+            }}
           >
             Cart To Home
           </Link>

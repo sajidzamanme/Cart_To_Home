@@ -19,8 +19,6 @@ const ItemPage = () => {
 
   const params = useParams();
 
-  console.log(params.id);
-
   const [item, setItem] = useState(null);
 
   const [quantity, setQuantity] = useState(1);
@@ -28,8 +26,6 @@ const ItemPage = () => {
   useEffect(() => {
     setItem(itemStore.items.find((temp) => temp.id == params.id));
   }, [itemStore.items, params.id]);
-
-  console.log(item);
 
   return (
     <div className="grid grid-cols-2 w-full md:grid-cols-4 xl:grid-cols-5">
@@ -116,7 +112,7 @@ const ItemPage = () => {
                       </div>
                     </div>
 
-                    <div className="flex flex-col gap-2 w-3/5 pr-3">
+                    <div className="flex flex-col gap-2 w-3/5">
                       <button className="self-start w-full max-w-[18rem] bg-[#3F72AF] rounded-lg text-white py-2 px-3 hover:bg-[#6090ca]">
                         Add to Cart
                       </button>

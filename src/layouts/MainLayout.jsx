@@ -10,6 +10,7 @@ const MainLayout = () => {
   const [loginState, setLoginState] = useState(false);
   const [adminState, setAdminState] = useState(false);
   const [onAdmin, setOnAdmin] = useState(false);
+  const [showLogoutMenu, setShowLogoutMenu] = useState(false);
 
   const [searchLine, setSearchLine] = useState("");
 
@@ -25,12 +26,26 @@ const MainLayout = () => {
         isMenuVisible={isMenuVisible}
         setIsMenuVisible={setIsMenuVisible}
         loginState={loginState}
-        setLoginState={setLoginState}
+        setShowLogoutMenu={setShowLogoutMenu}
         searchLine={searchLine}
         setSearchLine={setSearchLine}
         setSelectedCatagory={setSelectedCatagory}
         setOnAdmin={setOnAdmin}
       />
+      {showLogoutMenu && (
+        <div className="absolute z-20 right-4 top-11">
+          <button
+            onClick={() => {
+              setLoginState(false);
+              setShowLogoutMenu(false);
+            }}
+            className="bg-white px-2 py-0.5 border rounded-xl"
+          >
+            Logout
+          </button>
+        </div>
+      )}
+
       <div className="relative h-full flex-grow bg-white">
         <div className="z-10 h-full">
           <Outlet

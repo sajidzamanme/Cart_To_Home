@@ -2,7 +2,6 @@ import SearchBar from "../components/SearchBar";
 import ItemList from "../components/ItemList";
 import SideBar from "../components/SideBar";
 import { useOutletContext } from "react-router-dom";
-import { useState } from "react";
 
 const homepage = () => {
   const {

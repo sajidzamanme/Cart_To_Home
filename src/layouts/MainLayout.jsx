@@ -13,6 +13,9 @@ const MainLayout = () => {
   const [showLogoutMenu, setShowLogoutMenu] = useState(false);
 
   const [searchLine, setSearchLine] = useState("");
+  const [length, setLength] = useState(0);
+  const [itemPerPage, setItemPerPage] = useState(0);
+  const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
     setIsMenuVisible(false);
@@ -22,6 +25,11 @@ const MainLayout = () => {
 
   return (
     <div className="flex flex-col min-h-dvh max-h-full w-full">
+      {showLogoutMenu && <div
+        className="fixed z-47 top-0 left-0 w-full h-full"
+        onClick={() => setShowLogoutMenu(false)}
+      ></div>}
+
       <NavBar
         isMenuVisible={isMenuVisible}
         setIsMenuVisible={setIsMenuVisible}
@@ -33,13 +41,13 @@ const MainLayout = () => {
         setOnAdmin={setOnAdmin}
       />
       {showLogoutMenu && (
-        <div className="absolute z-20 right-4 top-11">
+        <div className="absolute z-48 right-4 top-11">
           <button
             onClick={() => {
               setLoginState(false);
               setShowLogoutMenu(false);
             }}
-            className="bg-white px-2 py-0.5 border rounded-xl"
+            className="bg-white px-2 py-0.5 border rounded-xl w-[6rem] h-[4rem]"
           >
             Logout
           </button>
@@ -60,6 +68,12 @@ const MainLayout = () => {
               setOnAdmin,
               searchLine,
               setSearchLine,
+              length,
+              setLength,
+              itemPerPage,
+              setItemPerPage,
+              pageNumber,
+              setPageNumber,
             }}
           />
         </div>
@@ -76,7 +90,7 @@ const MainLayout = () => {
         ></div>
 
         <div
-          className={`z-50 absolute top-0 h-full w-2/3 bg-white md:hidden transform transition-all duration-300 ease-in-out ${
+          className={`z-46 absolute top-0 h-full w-2/3 bg-white md:hidden transform transition-all duration-300 ease-in-out ${
             isMenuVisible ? "translate-x-0" : "-translate-x-full"
           }`}
         >

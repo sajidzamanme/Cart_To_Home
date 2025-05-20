@@ -1,12 +1,22 @@
-import { useParams } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 import useItemStore from "../stores/useItemStore";
 import { useEffect, useState } from "react";
 import GoBackBtn from "../components/GoBackBtn";
+import PageBar from "../components/PageBar";
 
 import starIcon from "/img/starIcon.png";
 import CatagoryList from "../components/CatagoryList";
 
 const ItemPage = () => {
+  const {
+    length,
+    setLength,
+    itemPerPage,
+    setItemPerPage,
+    pageNumber,
+    setPageNumber,
+  } = useOutletContext();
+
   const itemStore = useItemStore();
 
   const params = useParams();
@@ -116,8 +126,21 @@ const ItemPage = () => {
                 Similar Products:
               </h1>
               <div className="flex flex-row lg:flex-col">
-                <CatagoryList selectedCatagory={item.catagory} />
+                <CatagoryList
+                  selectedCatagory={item.catagory}
+                  setLength={setLength}
+                  itemPerPage={itemPerPage}
+                  setItemPerPage={setItemPerPage}
+                  pageNumber={pageNumber}
+                  setPageNumber={setPageNumber}
+                />
               </div>
+              <PageBar
+                length={length}
+                itemPerPage={itemPerPage}
+                pageNumber={pageNumber}
+                setPageNumber={setPageNumber}
+              />
             </div>
           </div>
         )}

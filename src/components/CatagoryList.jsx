@@ -1,21 +1,34 @@
 import { useEffect, useState } from "react";
 import useItemStore from "../stores/useItemStore";
 import ItemCard from "./ItemCard";
-import PageBar from "./PageBar";
 
-const CatagoryList = ({ selectedCatagory, searchLine = "" }) => {
+const CatagoryList = ({
+  selectedCatagory,
+  searchLine = "",
+  setLength,
+  itemPerPage,
+  setItemPerPage,
+  pageNumber,
+  setPageNumber
+}) => {
   const itemStore = useItemStore();
   const selectedItems = itemStore.items.filter(
     (item) => item.catagory == selectedCatagory
   );
-  const [pageNumber, setPageNumber] = useState(1);
-  const itemPerPage = 2;
 
   const [showedItems, setShowedItems] = useState(selectedItems);
 
   useEffect(() => {
+    setItemPerPage(2);
+  }, []);
+
+  useEffect(() => {
     setPageNumber(1);
   }, [selectedCatagory]);
+
+  useEffect(() => {
+    setLength(showedItems.length);
+  }, [showedItems]);
 
   useEffect(() => {
     setShowedItems(
@@ -25,7 +38,7 @@ const CatagoryList = ({ selectedCatagory, searchLine = "" }) => {
           item.catagory.toLowerCase().includes(searchLine)
       )
     );
-  }, [searchLine, itemStore.items]);
+  }, [searchLine, itemStore.items, selectedCatagory]);
   return (
     <>
       {showedItems.length === 0 ? (
@@ -40,13 +53,6 @@ const CatagoryList = ({ selectedCatagory, searchLine = "" }) => {
             return <ItemCard key={item.id} item={item} />;
           })
       )}
-
-      <PageBar
-        length={showedItems.length}
-        itemPerPage={itemPerPage}
-        pageNumber={pageNumber}
-        setPageNumber={setPageNumber}
-      />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import SideBar from "../components/SideBar";
 import AddForm from "../components/AddForm";
 
@@ -11,8 +11,6 @@ const AddItemPage = () => {
     onAdmin,
     setOnAdmin,
   } = useOutletContext();
-
-  const navigate = useNavigate();
 
   return (
     <div className="grid grid-cols-2 w-full md:grid-cols-4 xl:grid-cols-5">

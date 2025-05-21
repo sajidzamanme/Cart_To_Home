@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import CatagoryList from "./CatagoryList";
 import DefaultList from "./DefaultList";
 import PageBar from "./PageBar";
@@ -12,6 +13,10 @@ const ItemList = ({ selectedCatagory, searchLine }) => {
     pageNumber,
     setPageNumber,
   } = useOutletContext();
+
+  useEffect(() => {
+    setPageNumber(1);
+  }, [searchLine, selectedCatagory]);
 
   return (
     <div className="grid place-items-center w-full px-3 my-4">

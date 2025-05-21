@@ -1,10 +1,10 @@
 import { useOutletContext, useParams } from "react-router-dom";
 import useItemStore from "../stores/useItemStore";
 import { useEffect, useState } from "react";
-import GoBackBtn from "../components/GoBackBtn";
 import PageBar from "../components/PageBar";
 
 import starIcon from "/img/starIcon.png";
+import defaultImage from "/img/default.jpeg";
 import CatagoryList from "../components/CatagoryList";
 
 const ItemPage = () => {
@@ -25,9 +25,15 @@ const ItemPage = () => {
 
   const [quantity, setQuantity] = useState(1);
 
+  const [imgSRC, setImgSRC] = useState(null);
+
   useEffect(() => {
     setItem(itemStore.items.find((temp) => temp.id == params.id));
   }, [itemStore.items, params.id]);
+
+  useEffect(() => {
+    !item ? null : setImgSRC(item.imageLocation)
+  }, [item]);
 
   return (
     <div className="h-full w-full flex flex-col items-center p-4">
@@ -37,9 +43,10 @@ const ItemPage = () => {
         ) : (
           <div className="w-full h-full flex flex-col justify-start gap-4">
             <div className="h-fit flex flex-col justify-start md:flex-row md:items-center md:gap-4">
-              <div className="bg-white flex flex-row items-center justify-center h-60 rounded-lg md:h-full md:aspect-square md:bg-[#DBE2EF] md:p-5">
+              <div className="bg-white flex flex-row items-center justify-center h-60 rounded-lg md:h-full md:min-w-[28%] md:aspect-square md:bg-[#DBE2EF] md:p-5">
                 <img
-                  src={item.imageLocation}
+                  src={imgSRC}
+                  onError={() => setImgSRC(defaultImage)}
                   alt="Product Image"
                   className="h-full w-auto object-contain rounded-lg"
                 />
@@ -129,7 +136,7 @@ const ItemPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-col md:bg-[#DBE2EF] md:rounded-lg md:p-5">
+            <div className="w-full flex flex-col md:bg-[#DBE2EF] md:rounded-lg md:p-5">
               <h1 className="text-lg font-medium text-[#3F72AF]">
                 Description:
               </h1>

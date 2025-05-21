@@ -1,12 +1,9 @@
-import { useNavigate } from "react-router-dom";
 import useItemStore from "../stores/useItemStore";
 import SlimItemCard from "./SlimItemCard";
 import { IoTrash } from "react-icons/io5";
 
 const RemoveForm = ({ searchLine }) => {
   const itemStore = useItemStore();
-
-  const navigate = useNavigate();
 
   const handleRemove = (item) => {
     itemStore.setItems(

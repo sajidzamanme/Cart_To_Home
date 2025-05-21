@@ -1,12 +1,22 @@
-import { useParams } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 import useItemStore from "../stores/useItemStore";
 import { useEffect, useState } from "react";
 import GoBackBtn from "../components/GoBackBtn";
+import PageBar from "../components/PageBar";
 
 import starIcon from "/img/starIcon.png";
 import CatagoryList from "../components/CatagoryList";
 
 const ItemPage = () => {
+  const {
+    length,
+    setLength,
+    itemPerPage,
+    setItemPerPage,
+    pageNumber,
+    setPageNumber,
+  } = useOutletContext();
+
   const itemStore = useItemStore();
 
   const params = useParams();
@@ -21,24 +31,21 @@ const ItemPage = () => {
 
   return (
     <div className="h-full w-full flex flex-col items-center p-4">
-      <div className="self-start">
-        <GoBackBtn />
-      </div>
-      <div className="w-full grid-cols-1 bg-[#DBE2EF] rounded-lg p-4 md:grid-cols-4">
+      <div className="container mx-auto grid-cols-1 bg-[#DBE2EF] rounded-lg p-4 md:bg-white">
         {item == null ? (
           <div className="h-full w-full p-4">Loading...</div>
         ) : (
-          <div className="w-full h-full flex flex-col justify-start gap-4 lg:flex-row">
-            <div className="flex flex-col justify-start lg:w-[80%]">
-              <div className="bg-white flex flex-row items-center justify-center h-60">
+          <div className="w-full h-full flex flex-col justify-start gap-4">
+            <div className="h-fit flex flex-col justify-start md:flex-row md:items-center md:gap-4">
+              <div className="bg-white flex flex-row items-center justify-center h-60 rounded-lg md:h-full md:aspect-square md:bg-[#DBE2EF] md:p-5">
                 <img
                   src={item.imageLocation}
                   alt="Product Image"
-                  className="h-full w-auto object-contain"
+                  className="h-full w-auto object-contain rounded-lg"
                 />
               </div>
 
-              <div className="flex flex-col gap-2 w-full">
+              <div className="flex flex-col gap-2 w-full md:bg-[#DBE2EF] md:rounded-lg md:h-full md:w-full md:p-5">
                 <div className="flex flex-col gap-1">
                   <h1 className="text-2xl font-semibold text-[#3F72AF]">
                     {item.name}
@@ -63,11 +70,21 @@ const ItemPage = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col">
-                  <h1 className="text-lg font-medium text-[#3F72AF]">
-                    Description:
-                  </h1>
-                  <p className="text-md">{item.description}</p>
+                <div className="flex flex-col gap-2 w-fit">
+                  <button className="border border-green-500 w-fit p-2.5 text-green-500 bg-white">
+                    Available In-Stock
+                  </button>
+                  <div className="flex flex-row gap-2">
+                    <button className="border border-[#3F72AF] w-fit p-2.5 text-[#3F72AF] bg-white">
+                      Base Variant
+                    </button>
+                    <button className="border border-[#3F72AF] w-fit p-2.5 text-[#3F72AF] bg-white">
+                      US Variant
+                    </button>
+                  </div>
+                  <button className="border border-[#3F72AF] w-fit p-2.5 text-[#3F72AF] bg-white">
+                    Official
+                  </button>
                 </div>
 
                 <div className="w-full flex flex-row items-center py-4 gap-4 sm:flex-col sm:items-start">
@@ -111,13 +128,35 @@ const ItemPage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-2 lg:w-[20%]">
+
+            <div className="flex flex-col md:bg-[#DBE2EF] md:rounded-lg md:p-5">
+              <h1 className="text-lg font-medium text-[#3F72AF]">
+                Description:
+              </h1>
+              <p className="text-md">{item.description}</p>
+            </div>
+
+            <div className="h-fit flex flex-col gap-2 md:bg-[#DBE2EF] md:rounded-lg md:p-5">
               <h1 className="text-[#3F72AF] font-semibold ml-2">
                 Similar Products:
               </h1>
-              <div className="flex flex-row lg:flex-col">
-                <CatagoryList selectedCatagory={item.catagory} />
-              </div>
+
+              <CatagoryList
+                selectedCatagory={item.catagory}
+                setLength={setLength}
+                itemPerPage={itemPerPage}
+                setItemPerPage={setItemPerPage}
+                pageNumber={pageNumber}
+                setPageNumber={setPageNumber}
+                itemSelected={item}
+              />
+
+              <PageBar
+                length={length}
+                itemPerPage={itemPerPage}
+                pageNumber={pageNumber}
+                setPageNumber={setPageNumber}
+              />
             </div>
           </div>
         )}

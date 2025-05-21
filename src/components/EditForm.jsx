@@ -81,7 +81,7 @@ const EditForm = () => {
           onChange={(e) =>
             setNewItem((prevState) => ({
               ...prevState,
-              price: "" ? "" : parseInt(e.target.value),
+              price: (e.target.value == "") ? "" : parseInt(e.target.value),
             }))
           }
         />
@@ -117,7 +117,7 @@ const EditForm = () => {
           onChange={(e) =>
             setNewItem((prevState) => ({
               ...prevState,
-              review: "" ? "" : parseInt(e.target.value),
+              review: (e.target.value == "") ? "" : parseInt(e.target.value),
             }))
           }
         />

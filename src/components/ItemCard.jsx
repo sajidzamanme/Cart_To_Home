@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import defaultImage from "/img/default.jpeg";
 import starIcon from "/img/starIcon.png";
 import { Link } from "react-router-dom";

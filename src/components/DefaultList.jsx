@@ -1,15 +1,22 @@
 import { useEffect, useState } from "react";
 import useItemStore from "../stores/useItemStore";
 import ItemCard from "./ItemCard";
-import PageBar from "./PageBar";
 
-const DefaultList = ({ searchLine }) => {
+const DefaultList = ({
+  searchLine,
+  setLength,
+  itemPerPage,
+  setItemPerPage,
+  pageNumber,
+}) => {
   const itemStore = useItemStore();
-  const itemPerPage = 16;
-
-  const [pageNumber, setPageNumber] = useState(1);
+  setItemPerPage(16);
 
   const [showedItems, setShowedItems] = useState([]);
+
+  useEffect(() => {
+    setLength(showedItems.length);
+  }, [showedItems]);
 
   useEffect(() => {
     if (searchLine != "") {
@@ -37,13 +44,6 @@ const DefaultList = ({ searchLine }) => {
             return <ItemCard key={item.id} item={item} />;
           })
       )}
-
-      <PageBar
-        length={showedItems.length}
-        itemPerPage={itemPerPage}
-        pageNumber={pageNumber}
-        setPageNumber={setPageNumber}
-      />
     </>
   );
 };

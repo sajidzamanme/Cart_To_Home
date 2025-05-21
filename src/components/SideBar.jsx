@@ -42,35 +42,39 @@ const SideBar = ({
           </button>
         )}
 
-        <button
-          onClick={() => setIsCatagoryClicked((prevState) => !prevState)}
-          className={`flex flex-row items-center justify-between w-full px-3 py-2 rounded-lg shadow-[0px_0px_3px_1px_rgb(199,224,255)] ${
-            isCatagoryClicked ? "bg-[#DBE2EF]" : ""
-          }`}
-        >
-          <h1>Categories</h1>
-          {isCatagoryClicked ? (
-            <IoIosArrowDropdownCircle />
-          ) : (
-            <IoIosArrowDropdown />
-          )}
-        </button>
-
-        <div
-          className={`flex flex-col gap-2 w-full overflow-hidden transform transition-all duration-500 ease-in-out ${
-            isCatagoryClicked ? "max-h-full" : "max-h-0"
-          }`}
-        >
-          {itemCatagories.map((item, index) => (
-            <SideBarTile
-              key={index}
-              label={item}
-              selectedCatagory={selectedCatagory}
-              setSelectedCatagory={setSelectedCatagory}
-              setIsMenuVisible={setIsMenuVisible}
-            />
-          ))}
-        </div>
+        {!onAdmin && (
+          <>
+            {" "}
+            <button
+              onClick={() => setIsCatagoryClicked((prevState) => !prevState)}
+              className={`flex flex-row items-center justify-between w-full px-3 py-2 rounded-lg shadow-[0px_0px_3px_1px_rgb(199,224,255)] ${
+                isCatagoryClicked ? "bg-[#DBE2EF]" : ""
+              }`}
+            >
+              <h1>Categories</h1>
+              {isCatagoryClicked ? (
+                <IoIosArrowDropdownCircle />
+              ) : (
+                <IoIosArrowDropdown />
+              )}
+            </button>
+            <div
+              className={`flex flex-col gap-2 w-full overflow-hidden transform transition-all duration-500 ease-in-out ${
+                isCatagoryClicked ? "max-h-full" : "max-h-0"
+              }`}
+            >
+              {itemCatagories.map((item, index) => (
+                <SideBarTile
+                  key={index}
+                  label={item}
+                  selectedCatagory={selectedCatagory}
+                  setSelectedCatagory={setSelectedCatagory}
+                  setIsMenuVisible={setIsMenuVisible}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

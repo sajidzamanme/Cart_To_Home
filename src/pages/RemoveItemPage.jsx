@@ -1,4 +1,4 @@
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import SideBar from "../components/SideBar";
 import RemoveForm from "../components/RemoveForm";
 import SearchBar from "../components/SearchBar";
@@ -16,8 +16,6 @@ const RemoveItemPage = () => {
   } = useOutletContext();
 
   const [searchLine, setSearchLine] = useState("");
-
-  const navigate = useNavigate();
 
   return (
     <div className="grid grid-cols-2 w-full md:grid-cols-4 xl:grid-cols-5">
@@ -37,7 +35,9 @@ const RemoveItemPage = () => {
       <div className="col-span-2 w-full md:col-span-3 xl:col-span-4">
         <div className="w-full px-6 mt-4">
           <div className="flex flex-row items-center justify-center w-[98%] max-w-[50rem] place-self-center">
-            <div className="hidden md:flex"><GoBackBtn /></div>
+            <div className="hidden md:flex">
+              <GoBackBtn />
+            </div>
             <SearchBar searchLine={searchLine} setSearchLine={setSearchLine} />
           </div>
         </div>

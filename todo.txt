@@ -16,7 +16,15 @@
 15. [X] Fix "." issue while searching
 16. [X] Implement button to clear search
 17. [ ] Improve documentation, consistency and usability
-18. [ ] Improve pagination logic
+18. [.] Improve pagination logic (fix how many items are shown)
+19. [X] Fix: While on page 2 in homepage, searching is bugged (homepage and others too)
+20. [X] Fix: While on ItemPage, The item we are viewing is still suggested
+21. [X] Improve Desktop view of ItemPage
+22. [X] Fix: While a catagory is selected, selecting another catagory doesn't switch pages
+23. [X] Fix: Page number doesn't Reset
+24. [X] Implement hovering effect on navbar icons
+25. [X] Fix: While on admin panel disable Catagories
+26. [X] Fix: While logoutMenu is open, clicking anywhere else doesnt close it
 
 
 

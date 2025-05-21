@@ -81,7 +81,7 @@ const NavBar = ({
         </div>
 
         <div className="flex flex-row items-center justify-center gap-4">
-          <FaShoppingCart className="text-white size-7"/>
+          <FaShoppingCart className="text-white size-7 hover:text-gray-200"/>
           <button
             onClick={() => {
               if (loginState) {
@@ -92,7 +92,7 @@ const NavBar = ({
             }}
             className="mr-4 flex flex-row items-center justify-center"
           >
-            <FaUser className="text-white size-6" />
+            <FaUser className="text-white size-6 hover:text-gray-200" />
           </button>
         </div>
       </div>

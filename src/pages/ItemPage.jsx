@@ -36,13 +36,13 @@ const ItemPage = () => {
   }, [item]);
 
   return (
-    <div className="h-full w-full flex flex-col items-center p-4">
-      <div className="container mx-auto grid-cols-1 bg-[#DBE2EF] rounded-lg p-4 md:bg-white">
+    <div className="h-full w-full flex flex-col items-center p-2">
+      <div className="container mx-auto grid-cols-1 rounded-lg p-4 bg-white">
         {item == null ? (
           <div className="h-full w-full p-4">Loading...</div>
         ) : (
-          <div className="w-full h-full flex flex-col justify-start gap-4">
-            <div className="h-fit flex flex-col justify-start md:flex-row md:items-center md:gap-4">
+          <div className="w-full h-full flex flex-col justify-start gap-2 sm:gap-3 md:gap-4">
+            <div className="h-full w-full flex flex-col justify-start md:flex-row md:items-center bg-[#DBE2EF] rounded-lg gap-4 p-5">
               <div className="bg-white flex flex-row items-center justify-center h-60 rounded-lg md:h-full md:min-w-[28%] md:aspect-square md:bg-[#DBE2EF] md:p-5">
                 <img
                   src={imgSRC}
@@ -52,13 +52,13 @@ const ItemPage = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 w-full md:bg-[#DBE2EF] md:rounded-lg md:h-full md:w-full md:p-5">
-                <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-4 w-full">
+                <div className="flex flex-col gap-2">
                   <h1 className="text-2xl font-semibold text-[#3F72AF]">
                     {item.name}
                   </h1>
 
-                  <div className="flex flex-row justify-between items-center">
+                  <div className="flex flex-row justify-between items-center gap-2 lg:flex-col lg:items-start">
                     <h1 className="text-lg font-semibold text-[#3F72AF]">
                       {item.price} tk
                     </h1>
@@ -94,7 +94,7 @@ const ItemPage = () => {
                   </button>
                 </div>
 
-                <div className="w-full flex flex-row items-center py-4 gap-4 sm:flex-col sm:items-start">
+                <div className="w-full flex flex-row items-center gap-4 sm:flex-col sm:items-start">
                   <div className="flex flex-col gap-2 w-2/5 sm:flex-row sm:items-center">
                     <div className="flex flex-row items-center gap-2">
                       <label htmlFor="quantity">Quantity:</label>
@@ -136,14 +136,14 @@ const ItemPage = () => {
               </div>
             </div>
 
-            <div className="w-full flex flex-col md:bg-[#DBE2EF] md:rounded-lg md:p-5">
+            <div className="w-full flex flex-col bg-[#DBE2EF] rounded-lg p-5">
               <h1 className="text-lg font-medium text-[#3F72AF]">
                 Description:
               </h1>
               <p className="text-md">{item.description}</p>
             </div>
 
-            <div className="h-fit flex flex-col gap-2 md:bg-[#DBE2EF] md:rounded-lg md:p-5">
+            <div className="h-fit flex flex-col gap-2 bg-[#DBE2EF] rounded-lg p-3 md:p-5">
               <h1 className="text-[#3F72AF] font-semibold ml-2">
                 Similar Products:
               </h1>

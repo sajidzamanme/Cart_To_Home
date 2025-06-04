@@ -1,12 +1,19 @@
-# React + Vite
+# Cart To Home
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Basic e-commerce site with minimal admin panel. There is no backend yet — data is stored temporarily in-memory and resets on refresh.
 
-Currently, two official plugins are available:
+# Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Responsive Design
+2. Searching
+3. Catagory Lists
+4. Items are divided into multiple pages
+5. Item Page
+6. Minimal Admin Panel
+7. Option to Add, edit and remove items
 
-## Expanding the ESLint configuration
+# Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![HomePage](https://github.com/user-attachments/assets/0c30e79c-d1c8-4053-a6b2-d37389533768)
+
+![ItemPage](https://github.com/user-attachments/assets/9e72756b-a710-431a-bb1a-df16a1ab8134)
